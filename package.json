@@ -1,0 +1,23 @@
+{
+  "name": "prestyled",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "Andreas Sahle <andreas.sahle@wunder.io> (https://wunder.io/)",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "polished": "^1.4.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "styled-components": "^2.1.2"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.2.4"
+  }
+}
