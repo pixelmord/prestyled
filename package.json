@@ -1,24 +1,54 @@
 {
   "name": "prestyled",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
+  "repository": "https://github.com/pixelmord/prestyled",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 9009 -c .storybook",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [],
   "author": "Andreas Sahle <andreas.sahle@gmail.com> (https://pixelmord.github.io)",
   "license": "GPL-2.0",
   "dependencies": {
-    "polished": "^1.4.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "styled-components": "^2.1.2"
+    "@emotion/cache": "^10.0.7",
+    "@emotion/core": "^10.0.7",
+    "@emotion/styled": "^10.0.7",
+    "emotion-theming": "^10.0.7",
+    "html-loader": "^0.5.5",
+    "markdown-loader": "^5.0.0",
+    "polished": "^3.0.1",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "storybook-addon-emotion-theme": "^2.1.0",
+    "storybook-readme": "^4.0.5"
   },
   "devDependencies": {
-    "@storybook/addon-options": "^3.2.10",
-    "@storybook/react": "^3.2.4"
+    "@babel/core": "^7.3.4",
+    "@storybook/addon-actions": "^4.1.13",
+    "@storybook/addon-info": "^4.1.13",
+    "@storybook/addon-links": "^4.1.13",
+    "@storybook/addon-options": "^4.1.13",
+    "@storybook/react": "^4.1.13",
+    "@storybook/storybook-deployer": "^2.8.1",
+    "@types/babel__core": "^7.1.0",
+    "@types/jest": "^24.0.9",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.2",
+    "@types/storybook-readme": "^4.0.0",
+    "@types/storybook__addon-actions": "^3.4.2",
+    "@types/storybook__addon-info": "^4.1.0",
+    "@types/storybook__addon-links": "^3.3.4",
+    "@types/storybook__addon-options": "^4.0.1",
+    "@types/storybook__react": "^4.0.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.5",
+    "jest": "^24.1.0",
+    "react-docgen-typescript-loader": "^3.0.1",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333"
   }
 }

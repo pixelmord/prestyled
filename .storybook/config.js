@@ -1,18 +1,26 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
-import { ThemeProvider } from 'styled-components';
-import theme from '../theme';
+import { withOptions } from '@storybook/addon-options';
+import { withInfo } from '@storybook/addon-info';
 
-const ThemeDecorator = (storyFn) => (
-  <ThemeProvider theme={theme}>
-    { storyFn() }
-  </ThemeProvider>
+import themeDefault from '../theme';
+
+addDecorator(
+  withOptions({
+    name: 'Prestyled',
+    url: 'https://github.com/pixelmord/prestyled'
+  })
 );
-addDecorator(ThemeDecorator);
+addDecorator(withInfo());
+import { withThemesProvider } from 'storybook-addon-emotion-theme';
 
+const themes = [themeDefault];
+addDecorator(withThemesProvider(themes));
+
+// automatically import all files ending in *.stories.tsx
+const req = require.context('../components', true, /.stories.tsx$/);
 function loadStories() {
-  require('../stories');
+  req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);
