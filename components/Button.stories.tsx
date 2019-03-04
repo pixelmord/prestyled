@@ -12,7 +12,7 @@ storiesOf('Button', module)
     withDocs(ButtonReadme as any, () => <Button>Hello Button</Button>)
   )
   .add('with some emoji', () => (
-    <Button primary>
+    <Button primary={true}>
       <span role="img" aria-label="so cool">
         😀 😎 👍 💯
       </span>
