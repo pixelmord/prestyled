@@ -1594,6 +1594,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.10.4.tgz#3f5fc4f0f322805f009e00ab35a2ff3d6b778e42"
   integrity sha512-wa09itaLE8L705aXd8F80jnFpxz3Y1/KRHfKsYL2bPc0XF+wEWu8sR9n5bmeu8Ba1N9z2GRNzm/YdHcghLkLKg==
 
+"@types/prettier@^1.16.1":
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.16.1.tgz#328d1c9b54402e44119398bcb6a31b7bbd606d59"
+  integrity sha512-db6pZL5QY3JrlCHBhYQzYDci0xnoDuxfseUuguLRr3JNk+bnCfpkK6p8quiUDyO8A0vbpBKkk59Fw125etrNeA==
+
 "@types/prop-types@*":
   version "15.7.0"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.0.tgz#4c48fed958d6dcf9487195a0ef6456d5f6e0163a"
@@ -1660,6 +1665,13 @@
   dependencies:
     "@types/react" "*"
     "@types/webpack-env" "*"
+
+"@types/styled-system@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-3.2.2.tgz#a40b30baf20a8d9820808688a370a973cb778e7c"
+  integrity sha512-QjjszVXRIeAT1fAQewWKh1Ewq3/i6xeYp2DH7DC151FfnLNtUbjT8CxUuqpnKrRiessoKdQVLw+3xu/RiMpNBQ==
+  dependencies:
+    csstype "^2.2.0"
 
 "@types/unist@*", "@types/unist@^2.0.0":
   version "2.0.3"

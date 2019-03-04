@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "build",
     "module": "commonjs",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
@@ -8,7 +7,7 @@
     "allowJs": false,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDirs": ["components"],
+    "rootDirs": ["src"],
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -21,6 +20,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["components/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "scripts"]
 }
