@@ -10,7 +10,7 @@ export interface Props extends ComponentProps {
 export const Button: React.SFC<Props> = styled('button')`
   /* Adapt the colours based on primary prop */
   background: ${(props: Props) =>
-    props.displayType === 'primary' ? props.theme.colorPrimary : 'white'};
+    props.displayType === 'primary' ? props.theme.colors.primary : 'white'};
   color: ${(props: Props) =>
     props.displayType === 'primary' ? 'white' : 'red'};
 

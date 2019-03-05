@@ -1,22 +1,22 @@
 const colors = {
   /* Colors (most courtesy of http://clrs.cc/) */
-  colorAqua: '#7fdbff',
-  colorBlack: '#111',
-  colorBlue: '#0074d9',
-  colorFuchsia: '#f012be',
-  colorGray: '#aaa',
-  colorGreen: '#2ecc40',
-  colorLime: '#01ff70',
-  colorMaroon: '#85144b',
-  colorNavy: '#001f3f',
-  colorOlive: '#3d9970',
-  colorOrange: '#ff851b',
-  colorPurple: '#b10dc9',
-  colorRed: '#ff4136',
-  colorSilver: '#ddd',
-  colorTeal: '#39cccc',
-  colorWhite: 'white',
-  colorYellow: '#ffdc00',
+  aqua: '#7fdbff',
+  black: '#111',
+  blue: '#0074d9',
+  fuchsia: '#f012be',
+  gray: '#aaa',
+  green: '#2ecc40',
+  lime: '#01ff70',
+  maroon: '#85144b',
+  navy: '#001f3f',
+  olive: '#3d9970',
+  orange: '#ff851b',
+  purple: '#b10dc9',
+  red: '#ff4136',
+  silver: '#ddd',
+  teal: '#39cccc',
+  white: 'white',
+  yellow: '#ffdc00',
 };
 
 const components = {
@@ -33,13 +33,38 @@ const components = {
   componentSpeed: '.1s',
 };
 
-const theme = {
+// tslint:disable: object-literal-sort-keys
+export const defaultTheme = {
   name: 'Default',
   /* Colors */
-  ...colors,
-  /* Special colors */
-  colorPrimary: colors.colorBlue,
+  colors: {
+    ...colors,
+    /* Special colors */
+    primary: colors.blue,
+  },
+  fontSizes: [
+    '0.625rem',
+    '0.75rem',
+    '0.875rem',
+    '1rem',
+    '1.125rem',
+    '1.5rem',
+    '2rem',
+    '3rem',
+    '4rem',
+  ],
+  space: [
+    // margin and padding
+    0,
+    '0.5em',
+    '1em',
+    '2em',
+    '3em',
+    '4em',
+    '5em',
+    '6em',
+  ],
   /* Components */
   ...components,
 };
-export default theme;
+export default defaultTheme;
