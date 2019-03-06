@@ -19,6 +19,8 @@ import {
   SpaceProps,
   textAlign,
   TextAlignProps,
+  textStyle,
+  TextStyleProps,
 } from 'styled-system';
 import { ComponentProps } from '../../types/Component';
 
@@ -32,7 +34,8 @@ export interface TextProps
     LetterSpacingProps,
     LineHeightProps,
     SpaceProps,
-    TextAlignProps {}
+    TextAlignProps,
+    TextStyleProps {}
 
 export const Text: React.SFC<TextProps> = styled('div')`
   ${space}
@@ -44,4 +47,5 @@ export const Text: React.SFC<TextProps> = styled('div')`
   ${lineHeight}
   ${color}
   ${textAlign}
+  ${textStyle}
 `;

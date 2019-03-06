@@ -66,5 +66,14 @@ export const defaultTheme = {
   ],
   /* Components */
   ...components,
+  buttons: {
+    primary: {
+      color: 'white',
+      backgroundColor: 'blue',
+      '&:hover': {
+        backgroundColor: 'black',
+      },
+    },
+  },
 };
 export default defaultTheme;

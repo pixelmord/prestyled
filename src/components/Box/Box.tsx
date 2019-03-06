@@ -4,10 +4,14 @@ import {
   alignSelf,
   AlignSelfProps,
   BorderProps,
+  borderRadius,
+  BorderRadiusProps,
   borders,
   BordersProps,
   color,
   ColorProps,
+  colorStyle,
+  ColorStyleProps,
   flex,
   FlexProps,
   order,
@@ -25,19 +29,25 @@ export interface BoxProps
     WidthProps,
     SpaceProps,
     ColorProps,
+    ColorStyleProps,
     FlexProps,
     OrderProps,
     AlignSelfProps,
     BorderProps,
-    BordersProps {}
+    BordersProps,
+    BorderRadiusProps {}
 
 export const Box: React.SFC<BoxProps> = styled('div')`
   box-sizing: border-box;
   ${space}
   ${width}
   ${color}
+  ${colorStyle}
   ${flex}
   ${order}
   ${alignSelf}
   ${borders}
+  ${borderRadius}
 `;
+
+Box.displayName = 'Box';

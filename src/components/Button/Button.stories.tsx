@@ -10,6 +10,4 @@ storiesOf('Button', module)
   .addDecorator(withReadme([ButtonReadme as any]))
   .add('default', () => <Button>Click the Button</Button>)
   .addDecorator(withReadme([ButtonReadme as any]))
-  .add('with text', () => (
-    <Button displayType="primary">Click the Button</Button>
-  ));
+  .add('primary', () => <Button variant="primary">Click the Button</Button>);
