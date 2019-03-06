@@ -1,7 +1,15 @@
 import * as React from 'react';
-interface StyledComponentProps {
-  primary?: boolean;
-  theme?: any;
-}
-declare const Button: React.SFC<StyledComponentProps>;
-export default Button;
+import {
+  ButtonStyleProps,
+  FontSizeProps,
+  FontWeightProps,
+} from 'styled-system';
+import { ComponentProps } from '../../types/Component';
+import { BoxProps } from '../Box';
+export interface ButtonProps
+  extends ComponentProps,
+    BoxProps,
+    ButtonStyleProps,
+    FontSizeProps,
+    FontWeightProps {}
+export declare const Button: React.SFC<ButtonProps>;
