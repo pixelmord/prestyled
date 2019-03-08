@@ -6,6 +6,6 @@ import { withReadme } from 'storybook-readme';
 import { Text } from './Text';
 import * as TextReadme from './Text.readme.md';
 
-storiesOf('Text', module)
+storiesOf('Typography', module)
   .addDecorator(withReadme([TextReadme as any]))
-  .add('default', () => <Text>This is a text</Text>);
+  .add('Text', () => <Text>This is a text</Text>);
