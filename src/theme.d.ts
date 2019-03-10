@@ -4,7 +4,38 @@ export declare const breakpoints: {
 export declare const mediaQueries: {
   [key: string]: string;
 };
+export declare const baseColors: {
+  aqua: string;
+  black: string;
+  blue: string;
+  fuchsia: string;
+  gray: string;
+  green: string;
+  lime: string;
+  maroon: string;
+  navy: string;
+  olive: string;
+  orange: string;
+  purple: string;
+  red: string;
+  silver: string;
+  teal: string;
+  white: string;
+  yellow: string;
+};
+export declare const grayScale: {
+  grayBlack: string;
+  grayDarkest: string;
+  grayDarker: string;
+  grayDark: string;
+  gray: string;
+  grayLight: string;
+  grayLighter: string;
+  grayLightest: string;
+};
 export declare const colors: {
+  primary: string;
+  text: string;
   aqua: string;
   black: string;
   blue: string;
@@ -189,7 +220,82 @@ export declare const textStyles: {
     };
   };
 };
+export declare const buttons: {
+  primary: {
+    color: string;
+    backgroundColor: string;
+    '&:hover': {
+      backgroundColor: string;
+    };
+  };
+};
+export declare const base: {
+  bgColor: string;
+  borderColor: string;
+  borderRadius: string;
+  borderWidth: string;
+  boxShadowInner: string;
+  boxShadowOuter: string;
+  focusWidth: string;
+  paddingX: string;
+  paddingY: string;
+  speed: string;
+};
 export declare const defaultTheme: {
+  name: string;
+  colors: {
+    primary: string;
+    text: string;
+    aqua: string;
+    black: string;
+    blue: string;
+    fuchsia: string;
+    gray: string;
+    green: string;
+    lime: string;
+    maroon: string;
+    navy: string;
+    olive: string;
+    orange: string;
+    purple: string;
+    red: string;
+    silver: string;
+    teal: string;
+    white: string;
+    yellow: string;
+  };
+  fonts: {
+    headline: string;
+    text: string;
+    mono: string;
+  };
+  fontSizes: string[];
+  fontWeights: {
+    medium: number;
+    bold: number;
+    regular: number;
+  };
+  lineHeights: {
+    standard: number;
+    display: number;
+  };
+  letterSpacings: {
+    normal: string;
+    caps: string;
+  };
+  space: string[];
+  base: {
+    bgColor: string;
+    borderColor: string;
+    borderRadius: string;
+    borderWidth: string;
+    boxShadowInner: string;
+    boxShadowOuter: string;
+    focusWidth: string;
+    paddingX: string;
+    paddingY: string;
+    speed: string;
+  };
   buttons: {
     primary: {
       color: string;
@@ -341,48 +447,6 @@ export declare const defaultTheme: {
         marginTop: string;
       };
     };
-  };
-  componentBgColor: string;
-  componentBorderColor: string;
-  componentBorderRadius: string;
-  componentBorderWidth: string;
-  componentBoxShadowInner: string;
-  componentBoxShadowOuter: string;
-  componentFocusWidth: string;
-  componentPaddingX: string;
-  componentPaddingY: string;
-  componentSpeed: string;
-  name: string;
-  colors: {
-    primary: string;
-    aqua: string;
-    black: string;
-    blue: string;
-    fuchsia: string;
-    gray: string;
-    green: string;
-    lime: string;
-    maroon: string;
-    navy: string;
-    olive: string;
-    orange: string;
-    purple: string;
-    red: string;
-    silver: string;
-    teal: string;
-    white: string;
-    yellow: string;
-  };
-  fonts: {
-    headline: string;
-    text: string;
-    mono: string;
-  };
-  fontSizes: string[];
-  space: string[];
-  letterSpacings: {
-    normal: string;
-    caps: string;
   };
 };
 export default defaultTheme;
