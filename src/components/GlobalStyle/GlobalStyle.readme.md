@@ -1,7 +1,7 @@
 ## GlobalStyle
 
 ```js
-import GlobalStyle from './components/GlobalStyle';
+import { GlobalStyle } from './components/GlobalStyle';
 ```
 
 <!-- STORY -->
