@@ -25,7 +25,7 @@ export const mediaQueries: {
   {}
 );
 
-export const colors = {
+export const baseColors = {
   /* Colors (most courtesy of http://clrs.cc/) */
   aqua: '#7fdbff',
   black: '#111',
@@ -44,6 +44,23 @@ export const colors = {
   teal: '#39cccc',
   white: 'white',
   yellow: '#ffdc00',
+};
+
+export const grayScale = {
+  grayBlack: '#22292f',
+  grayDarkest: '#3d4852',
+  grayDarker: '#606f7b',
+  grayDark: '#8795a1',
+  gray: '#b8c2cc',
+  grayLight: '#dae1e7',
+  grayLighter: '#f1f5f8',
+  grayLightest: '#f8fafc',
+};
+
+export const colors = {
+  ...baseColors,
+  primary: baseColors.blue,
+  text: grayScale.grayDarkest,
 };
 
 export const space = [
@@ -204,43 +221,42 @@ export const textStyles = {
   },
 };
 
-const components = {
+export const buttons = {
+  primary: {
+    color: 'white',
+    backgroundColor: 'blue',
+    '&:hover': {
+      backgroundColor: 'black',
+    },
+  },
+};
+
+export const base = {
   /* Components */
-  componentBgColor: '#f2f2f2',
-  componentBorderColor: '#ddd',
-  componentBorderRadius: '.25rem',
-  componentBorderWidth: '1px',
-  componentBoxShadowInner: 'inset 0 1px 1px rgba(0, 0, 0, .05)',
-  componentBoxShadowOuter: '0 1px 0 rgba(0, 0, 0, .05)',
-  componentFocusWidth: '2px',
-  componentPaddingX: '1rem',
-  componentPaddingY: '1rem',
-  componentSpeed: '.1s',
+  bgColor: grayScale.grayLighter,
+  borderColor: grayScale.grayLight,
+  borderRadius: '.25rem',
+  borderWidth: '1px',
+  boxShadowInner: 'inset 0 1px 1px rgba(0, 0, 0, .05)',
+  boxShadowOuter: '0 1px 0 rgba(0, 0, 0, .05)',
+  focusWidth: '2px',
+  paddingX: '1rem',
+  paddingY: '1rem',
+  speed: '.1s',
 };
 
 export const defaultTheme = {
   name: 'Default',
   /* Colors */
-  colors: {
-    ...colors,
-    /* Special colors */
-    primary: colors.blue,
-  },
+  colors,
   fonts,
   fontSizes,
-  space,
+  fontWeights,
+  lineHeights,
   letterSpacings,
-  /* Components */
-  ...components,
-  buttons: {
-    primary: {
-      color: 'white',
-      backgroundColor: 'blue',
-      '&:hover': {
-        backgroundColor: 'black',
-      },
-    },
-  },
+  space,
+  base,
+  buttons,
   textStyles,
 };
 export default defaultTheme;
