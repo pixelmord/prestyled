@@ -2,19 +2,19 @@ import * as React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import { Headline } from './Headline';
+import { H1, H2, H3, H4, H5, H6, Headline } from './Headline';
 import * as HeadlineReadme from './Headline.readme.md';
 
 storiesOf('Typography', module).add(
   'Headline',
   () => (
     <div>
-      <Headline>This is a headline H1</Headline>
-      <Headline as="h2">This is a headline H2</Headline>
-      <Headline as="h3">This is a headline H3</Headline>
-      <Headline as="h4">This is a headline H4</Headline>
-      <Headline as="h5">This is a headline H5</Headline>
-      <Headline as="h6">This is a headline H6</Headline>
+      <H1>This is a headline H1</H1>
+      <H2>This is a headline H2</H2>
+      <H3>This is a headline H3</H3>
+      <H4>This is a headline H4</H4>
+      <H5>This is a headline H5</H5>
+      <H6>This is a headline H6</H6>
       <br />
       <Headline textStyle="h2">This is a headline H1, styled as H2</Headline>
       <Headline as="h2" textStyle="h1">
