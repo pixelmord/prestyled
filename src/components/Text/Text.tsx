@@ -21,6 +21,7 @@ import {
   TextAlignProps,
   textStyle,
   TextStyleProps,
+  themeGet,
 } from 'styled-system';
 import { ComponentProps } from '../../types/Component';
 
@@ -38,6 +39,8 @@ export interface TextProps
     TextStyleProps {}
 
 export const Text: React.SFC<TextProps> = styled('div')`
+  font-family: ${themeGet('fonts.text', 'sans-serif')};
+  line-height: ${themeGet('lineHeights.standard', '1.6')};
   ${space}
   ${fontFamily}
   ${fontSize}

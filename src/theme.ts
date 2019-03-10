@@ -226,6 +226,7 @@ export const defaultTheme = {
     /* Special colors */
     primary: colors.blue,
   },
+  fonts,
   fontSizes,
   space,
   letterSpacings,

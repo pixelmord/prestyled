@@ -1,38 +1,36 @@
-import { configure, addDecorator } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
-import { withInfo } from '@storybook/addon-info';
+import { configure, addDecorator, addParameters } from '@storybook/react';
+import { create } from '@storybook/theming';
 import { withThemesProvider } from 'storybook-addon-emotion-theme';
 import React from 'react';
+import { withA11y } from '@storybook/addon-a11y';
 
 import themeDefault from '../src/theme';
 import { GlobalStyle } from '../src/components/GlobalStyle';
 
-addDecorator(
-  withOptions({
-    name: 'Prestyled',
-    url: 'https://github.com/pixelmord/prestyled',
-  })
-);
+addParameters({
+  options: {
+    theme: create({
+      base: 'dark',
+      brandTitle: 'Prestyled',
+      brandUrl: 'https://github.com/pixelmord/prestyled',
+    }),
+  },
+});
 
-addDecorator(
-  withInfo({
-    inline: true,
-  })
-);
+addDecorator(withA11y);
+function withGlobalStyles(storyFn) {
+  return (
+    <div>
+      <GlobalStyle />
+      {storyFn()}
+    </div>
+  );
+}
+
+addDecorator(withGlobalStyles);
 
 const emotionThemes = [themeDefault];
 addDecorator(withThemesProvider(emotionThemes));
-
-// function withGlobalStyles(storyFn) {
-//   return (
-//     <div>
-//       <GlobalStyle />
-//       {storyFn()}
-//     </div>
-//   );
-// }
-
-// addDecorator(withGlobalStyles);
 
 // automatically import all files ending in *.stories.tsx
 const req = require.context('../src/components', true, /.stories.tsx$/);

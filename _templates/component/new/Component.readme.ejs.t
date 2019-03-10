@@ -1,7 +1,7 @@
 ---
 to: src/components/<%= Name %>/<%= Name %>.readme.md
 ---
-## <%= Name %>
+### <%= Name %>
 
 ```js
 import <%= Name %> from './components/<%= Name %>';

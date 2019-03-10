@@ -7,8 +7,11 @@ export const GlobalStyle: React.SFC<ComponentProps> = () => (
   <Global
     styles={{
       '*': { boxSizing: 'border-box' },
-      body: {
+      'html, body': {
+        fontFamily:
+          'system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
         margin: 0,
+        padding: 0,
       },
     }}
   />

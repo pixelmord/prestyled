@@ -1,15 +1,14 @@
 import * as React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
 import { Box } from '../Box';
 import { Flex } from './Flex';
 import * as FlexReadme from './Flex.readme.md';
 
-storiesOf('Flex', module)
-  .addDecorator(withReadme([FlexReadme as any]))
-  .add('default', () => (
+storiesOf('Layout', module).add(
+  'Flex (Container)',
+  () => (
     <Flex>
       <Box width={1 / 2} p={2} color={'black'} bg="aqua">
         flex
@@ -18,4 +17,6 @@ storiesOf('Flex', module)
         box
       </Box>
     </Flex>
-  ));
+  ),
+  { notes: FlexReadme }
+);

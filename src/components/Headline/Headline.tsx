@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Text, TextProps } from '../Text';
 
 const HeadlineStyled: React.SFC<TextProps> = styled(Text)``;
+
 export const Headline: React.SFC<TextProps> = ({
   as = 'h1',
   textStyle,

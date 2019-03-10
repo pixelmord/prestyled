@@ -1,14 +1,13 @@
 import * as React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { withReadme } from 'storybook-readme';
 
 import { Headline } from './Headline';
 import * as HeadlineReadme from './Headline.readme.md';
 
-storiesOf('Typography', module)
-  .addDecorator(withReadme([HeadlineReadme as any]))
-  .add('Headline', () => (
+storiesOf('Typography', module).add(
+  'Headline',
+  () => (
     <div>
       <Headline>This is a headline H1</Headline>
       <Headline as="h2">This is a headline H2</Headline>
@@ -34,4 +33,6 @@ storiesOf('Typography', module)
         This is a headline H6, styled as H5
       </Headline>
     </div>
-  ));
+  ),
+  { notes: HeadlineReadme }
+);
