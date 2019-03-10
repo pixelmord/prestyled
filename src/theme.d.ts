@@ -373,6 +373,11 @@ export declare const defaultTheme: {
     white: string;
     yellow: string;
   };
+  fonts: {
+    headline: string;
+    text: string;
+    mono: string;
+  };
   fontSizes: string[];
   space: string[];
   letterSpacings: {
