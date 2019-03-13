@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { ComponentProps } from '../../types/Component';
 
-export const GlobalStyle: React.SFC<ComponentProps> = () => (
+export const GlobalStyle: React.FC<ComponentProps> = () => (
   <Global
     styles={{
       '*': { boxSizing: 'border-box' },

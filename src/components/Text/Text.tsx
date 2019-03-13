@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import * as React from 'react';
+import styled, { StyledComponent } from '@emotion/styled';
+import { PropsWithoutRef } from 'react';
 import {
   color,
   ColorProps,
@@ -23,11 +23,11 @@ import {
   TextStyleProps,
   themeGet,
 } from 'styled-system';
-import { ComponentProps } from '../../types/Component';
+
+import { Theme } from '../../theme';
 
 export interface TextProps
-  extends ComponentProps,
-    ColorProps,
+  extends ColorProps,
     FontFamilyProps,
     FontSizeProps,
     FontWeightProps,
@@ -38,7 +38,11 @@ export interface TextProps
     TextAlignProps,
     TextStyleProps {}
 
-export const Text: React.SFC<TextProps> = styled('div')`
+export const Text: StyledComponent<
+  PropsWithoutRef<JSX.IntrinsicElements['div']>,
+  TextProps,
+  Theme
+> = styled('div')`
   font-family: ${themeGet('fonts.text', 'sans-serif')};
   line-height: ${themeGet('lineHeights.standard', '1.6')};
   ${space}

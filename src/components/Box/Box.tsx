@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import * as React from 'react';
+import styled, { StyledComponent } from '@emotion/styled';
+import { PropsWithoutRef } from 'react';
 import {
   alignSelf,
   AlignSelfProps,
@@ -22,11 +22,10 @@ import {
   WidthProps,
 } from 'styled-system';
 
-import { ComponentProps } from '../../types/Component';
+import { Theme } from '../../theme';
 
 export interface BoxProps
-  extends ComponentProps,
-    WidthProps,
+  extends WidthProps,
     SpaceProps,
     ColorProps,
     ColorStyleProps,
@@ -37,7 +36,11 @@ export interface BoxProps
     BordersProps,
     BorderRadiusProps {}
 
-export const Box: React.SFC<BoxProps> = styled('div')`
+export const Box: StyledComponent<
+  PropsWithoutRef<JSX.IntrinsicElements['div']>,
+  BoxProps,
+  Theme
+> = styled('div')`
   box-sizing: border-box;
   ${space}
   ${width}

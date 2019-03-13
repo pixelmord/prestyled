@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import * as React from 'react';
+import styled, { StyledComponent } from '@emotion/styled';
+import { PropsWithoutRef } from 'react';
 import {
   buttonStyle,
   ButtonStyleProps,
@@ -8,17 +8,21 @@ import {
   fontWeight,
   FontWeightProps,
 } from 'styled-system';
-import { ComponentProps } from '../../types/Component';
+
+import { Theme } from '../../theme';
 import { Box, BoxProps } from '../Box';
 
 export interface ButtonProps
-  extends ComponentProps,
-    BoxProps,
+  extends BoxProps,
     ButtonStyleProps,
     FontSizeProps,
     FontWeightProps {}
 
-export const Button: React.SFC<ButtonProps> = styled(Box)`
+export const Button: StyledComponent<
+  PropsWithoutRef<JSX.IntrinsicElements['button']>,
+  ButtonProps,
+  Theme
+> = styled(Box)`
   appearance: 'none';
   display: 'inline-block';
   text-align: 'center';
@@ -27,13 +31,12 @@ export const Button: React.SFC<ButtonProps> = styled(Box)`
   ${buttonStyle}
   ${fontSize}
   ${fontWeight}
-`;
+`.withComponent('button');
 
 Button.defaultProps = {
-  as: 'button',
   bg: 'blue',
-  border: 0,
-  borderRadius: 4,
+  border: 'none',
+  borderRadius: '2px',
   color: 'white',
   fontSize: 'inherit',
   fontWeight: 'bold',

@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import * as React from 'react';
+import styled, { StyledComponent } from '@emotion/styled';
+import { PropsWithoutRef } from 'react';
 import {
   alignItems,
   AlignItemsProps,
@@ -11,6 +11,7 @@ import {
   JustifyContentProps,
 } from 'styled-system';
 
+import { Theme } from '../../theme';
 import { Box, BoxProps } from '../Box';
 
 export interface FlexProps
@@ -20,7 +21,11 @@ export interface FlexProps
     AlignItemsProps,
     JustifyContentProps {}
 
-export const Flex: React.SFC<FlexProps> = styled(Box)`
+export const Flex: StyledComponent<
+  PropsWithoutRef<JSX.IntrinsicElements['div']>,
+  FlexProps,
+  Theme
+> = styled(Box)`
   display: flex;
   ${flexWrap}
   ${flexDirection}
