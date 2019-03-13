@@ -1,9 +1,7 @@
 import { Global } from '@emotion/core';
 import * as React from 'react';
 
-import { ComponentProps } from '../../types/Component';
-
-export const GlobalStyle: React.FC<ComponentProps> = () => (
+export const GlobalStyle: React.FC<{}> = () => (
   <Global
     styles={{
       '*': { boxSizing: 'border-box' },

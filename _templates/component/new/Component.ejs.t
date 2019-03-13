@@ -1,15 +1,18 @@
 ---
 to: src/components/<%= name %>/<%= name %>.tsx
 ---
-import styled from '@emotion/styled';
-import * as React from 'react';
+import styled, { StyledComponent } from '@emotion/styled';
+import { PropsWithoutRef } from 'react';
+import { Theme } from '../../theme';
 
-import { ComponentProps } from '../../types/Component';
-
-export interface <%= name %>Props extends ComponentProps {
+export interface I<%= name %>Props {
 
 }
 
-export const <%= name %>: React.SFC<<%= name %>Props> = styled('div')`
+export const <%= name %>: StyledComponent<
+  PropsWithoutRef<JSX.IntrinsicElements['div']>,
+  I<%= name %>Props,
+  Theme
+> = styled('div')`
 
 `;

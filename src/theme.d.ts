@@ -241,212 +241,32 @@ export declare const base: {
   paddingY: string;
   speed: string;
 };
-export declare const defaultTheme: {
+export interface Theme {
   name: string;
   colors: {
-    primary: string;
-    text: string;
-    aqua: string;
-    black: string;
-    blue: string;
-    fuchsia: string;
-    gray: string;
-    green: string;
-    lime: string;
-    maroon: string;
-    navy: string;
-    olive: string;
-    orange: string;
-    purple: string;
-    red: string;
-    silver: string;
-    teal: string;
-    white: string;
-    yellow: string;
+    [key: string]: any;
   };
   fonts: {
-    headline: string;
-    text: string;
-    mono: string;
+    [key: string]: any;
   };
-  fontSizes: string[];
+  fontSizes: Array<string | number>;
   fontWeights: {
-    medium: number;
-    bold: number;
-    regular: number;
+    [key: string]: number;
   };
   lineHeights: {
-    standard: number;
-    display: number;
+    [key: string]: number;
   };
   letterSpacings: {
-    normal: string;
-    caps: string;
-  };
-  space: string[];
-  base: {
-    bgColor: string;
-    borderColor: string;
-    borderRadius: string;
-    borderWidth: string;
-    boxShadowInner: string;
-    boxShadowOuter: string;
-    focusWidth: string;
-    paddingX: string;
-    paddingY: string;
-    speed: string;
-  };
-  buttons: {
-    primary: {
-      color: string;
-      backgroundColor: string;
-      '&:hover': {
-        backgroundColor: string;
-      };
-    };
+    [key: string]: number | string;
   };
   textStyles: {
-    h6: {
-      fontFamily: string;
-      fontSize: string;
-      fontWeight: number;
-      lineHeight: number;
-      marginTop: string;
-      marginBottom: string;
-      '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-        marginTop: string;
-      };
-    };
-    h5: {
-      [x: string]:
-        | string
-        | number
-        | {
-            marginTop: string;
-            fontSize?: undefined;
-            '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6'?: undefined;
-          }
-        | {
-            fontSize: string;
-            '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-              marginTop: string;
-            };
-            marginTop?: undefined;
-          };
-      fontFamily: string;
-      fontSize: string;
-      fontWeight: number;
-      lineHeight: number;
-      marginBottom: string;
-      marginTop: string;
-      '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-        marginTop: string;
-      };
-    };
-    h4: {
-      [x: string]:
-        | string
-        | number
-        | {
-            marginTop: string;
-            fontSize?: undefined;
-            '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6'?: undefined;
-          }
-        | {
-            fontSize: string;
-            '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-              marginTop: string;
-            };
-            marginTop?: undefined;
-          };
-      fontFamily: string;
-      fontSize: string;
-      fontWeight: number;
-      lineHeight: number;
-      marginBottom: string;
-      marginTop: string;
-      '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-        marginTop: string;
-      };
-    };
-    h3: {
-      [x: string]:
-        | string
-        | number
-        | {
-            marginTop: string;
-            fontSize?: undefined;
-            '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6'?: undefined;
-          }
-        | {
-            fontSize: string;
-            '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-              marginTop: string;
-            };
-            marginTop?: undefined;
-          };
-      fontFamily: string;
-      fontSize: string;
-      fontWeight: number;
-      lineHeight: number;
-      marginBottom: string;
-      marginTop: string;
-      '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-        marginTop: string;
-      };
-    };
-    h2: {
-      [x: string]:
-        | string
-        | number
-        | {
-            marginTop: string;
-            fontSize?: undefined;
-            '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6'?: undefined;
-          }
-        | {
-            fontSize: string;
-            '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-              marginTop: string;
-            };
-            marginTop?: undefined;
-          };
-      fontFamily: string;
-      fontSize: string;
-      fontWeight: number;
-      lineHeight: number;
-      marginBottom: string;
-      marginTop: string;
-      '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-        marginTop: string;
-      };
-    };
-    h1: {
-      [x: string]:
-        | string
-        | number
-        | {
-            marginTop: string;
-            fontSize?: undefined;
-            '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6'?: undefined;
-          }
-        | {
-            fontSize: string;
-            '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-              marginTop: string;
-            };
-            marginTop?: undefined;
-          };
-      fontFamily: string;
-      fontSize: string;
-      fontWeight: number;
-      lineHeight: number;
-      marginBottom: string;
-      marginTop: string;
-      '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
-        marginTop: string;
-      };
-    };
+    [key: string]: any;
   };
-};
+  buttons: {
+    [key: string]: any;
+  };
+  space: Array<string | number>;
+  [key: string]: any;
+}
+export declare const defaultTheme: Theme;
 export default defaultTheme;

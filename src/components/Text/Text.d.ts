@@ -1,4 +1,5 @@
-import * as React from 'react';
+import { StyledComponent } from '@emotion/styled';
+import { PropsWithoutRef } from 'react';
 import {
   ColorProps,
   FontFamilyProps,
@@ -11,10 +12,9 @@ import {
   TextAlignProps,
   TextStyleProps,
 } from 'styled-system';
-import { ComponentProps } from '../../types/Component';
-export interface TextProps
-  extends ComponentProps,
-    ColorProps,
+import { Theme } from '../../theme';
+export interface ITextProps
+  extends ColorProps,
     FontFamilyProps,
     FontSizeProps,
     FontWeightProps,
@@ -24,4 +24,8 @@ export interface TextProps
     SpaceProps,
     TextAlignProps,
     TextStyleProps {}
-export declare const Text: React.SFC<TextProps>;
+export declare const Text: StyledComponent<
+  PropsWithoutRef<JSX.IntrinsicElements['div']>,
+  ITextProps,
+  Theme
+>;

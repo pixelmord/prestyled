@@ -24,7 +24,7 @@ import {
 
 import { Theme } from '../../theme';
 
-export interface BoxProps
+export interface IBoxProps
   extends WidthProps,
     SpaceProps,
     ColorProps,
@@ -38,7 +38,7 @@ export interface BoxProps
 
 export const Box: StyledComponent<
   PropsWithoutRef<JSX.IntrinsicElements['div']>,
-  BoxProps,
+  IBoxProps,
   Theme
 > = styled('div')`
   box-sizing: border-box;

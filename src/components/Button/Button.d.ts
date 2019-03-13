@@ -1,15 +1,19 @@
-import * as React from 'react';
+import { StyledComponent } from '@emotion/styled';
+import { PropsWithoutRef } from 'react';
 import {
   ButtonStyleProps,
   FontSizeProps,
   FontWeightProps,
 } from 'styled-system';
-import { ComponentProps } from '../../types/Component';
-import { BoxProps } from '../Box';
-export interface ButtonProps
-  extends ComponentProps,
-    BoxProps,
+import { Theme } from '../../theme';
+import { IBoxProps } from '../Box';
+export interface IButtonProps
+  extends IBoxProps,
     ButtonStyleProps,
     FontSizeProps,
     FontWeightProps {}
-export declare const Button: React.SFC<ButtonProps>;
+export declare const Button: StyledComponent<
+  PropsWithoutRef<JSX.IntrinsicElements['button']>,
+  IButtonProps,
+  Theme
+>;

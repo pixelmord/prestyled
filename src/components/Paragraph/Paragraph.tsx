@@ -3,11 +3,11 @@ import { PropsWithoutRef } from 'react';
 import { themeGet } from 'styled-system';
 
 import { Theme } from '../../theme';
-import { Text, TextProps } from '../Text';
+import { ITextProps, Text } from '../Text';
 
 export const Paragraph: StyledComponent<
   PropsWithoutRef<JSX.IntrinsicElements['div']>,
-  TextProps,
+  ITextProps,
   Theme
 > = styled(Text)`
   font-family: ${themeGet('fonts.text', 'sans-serif')};

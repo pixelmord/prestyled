@@ -9,4 +9,4 @@ import { <%= name %> } from './<%= name %>';
 import * as <%= name %>Readme from './<%= name %>.readme.md';
 
 storiesOf('<%= name %>', module)
-  .add('default', () => <<%= name %>></<%= name %>>, {notes: <%= name %>Readme});
+  .add('default', () => <<%= name %>>@TODO</<%= name %>>, {notes: <%= name %>Readme});

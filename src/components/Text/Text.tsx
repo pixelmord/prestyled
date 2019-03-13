@@ -26,7 +26,7 @@ import {
 
 import { Theme } from '../../theme';
 
-export interface TextProps
+export interface ITextProps
   extends ColorProps,
     FontFamilyProps,
     FontSizeProps,
@@ -40,7 +40,7 @@ export interface TextProps
 
 export const Text: StyledComponent<
   PropsWithoutRef<JSX.IntrinsicElements['div']>,
-  TextProps,
+  ITextProps,
   Theme
 > = styled('div')`
   font-family: ${themeGet('fonts.text', 'sans-serif')};

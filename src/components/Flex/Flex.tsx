@@ -12,10 +12,10 @@ import {
 } from 'styled-system';
 
 import { Theme } from '../../theme';
-import { Box, BoxProps } from '../Box';
+import { Box, IBoxProps } from '../Box';
 
-export interface FlexProps
-  extends BoxProps,
+export interface IFlexProps
+  extends IBoxProps,
     FlexWrapProps,
     FlexDirectionProps,
     AlignItemsProps,
@@ -23,7 +23,7 @@ export interface FlexProps
 
 export const Flex: StyledComponent<
   PropsWithoutRef<JSX.IntrinsicElements['div']>,
-  FlexProps,
+  IFlexProps,
   Theme
 > = styled(Box)`
   display: flex;

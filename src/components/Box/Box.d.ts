@@ -1,4 +1,5 @@
-import * as React from 'react';
+import { StyledComponent } from '@emotion/styled';
+import { PropsWithoutRef } from 'react';
 import {
   AlignSelfProps,
   BorderProps,
@@ -11,10 +12,9 @@ import {
   SpaceProps,
   WidthProps,
 } from 'styled-system';
-import { ComponentProps } from '../../types/Component';
-export interface BoxProps
-  extends ComponentProps,
-    WidthProps,
+import { Theme } from '../../theme';
+export interface IBoxProps
+  extends WidthProps,
     SpaceProps,
     ColorProps,
     ColorStyleProps,
@@ -24,4 +24,8 @@ export interface BoxProps
     BorderProps,
     BordersProps,
     BorderRadiusProps {}
-export declare const Box: React.SFC<BoxProps>;
+export declare const Box: StyledComponent<
+  PropsWithoutRef<JSX.IntrinsicElements['div']>,
+  IBoxProps,
+  Theme
+>;

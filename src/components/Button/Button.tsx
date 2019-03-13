@@ -10,17 +10,17 @@ import {
 } from 'styled-system';
 
 import { Theme } from '../../theme';
-import { Box, BoxProps } from '../Box';
+import { Box, IBoxProps } from '../Box';
 
-export interface ButtonProps
-  extends BoxProps,
+export interface IButtonProps
+  extends IBoxProps,
     ButtonStyleProps,
     FontSizeProps,
     FontWeightProps {}
 
 export const Button: StyledComponent<
   PropsWithoutRef<JSX.IntrinsicElements['button']>,
-  ButtonProps,
+  IButtonProps,
   Theme
 > = styled(Box)`
   appearance: 'none';
