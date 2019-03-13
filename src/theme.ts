@@ -245,7 +245,35 @@ export const base = {
   speed: '.1s',
 };
 
-export const defaultTheme = {
+export interface Theme {
+  name: string;
+  colors: {
+    [key: string]: any;
+  };
+  fonts: {
+    [key: string]: any;
+  };
+  fontSizes: Array<string | number>;
+  fontWeights: {
+    [key: string]: number;
+  };
+  lineHeights: {
+    [key: string]: number;
+  };
+  letterSpacings: {
+    [key: string]: number | string;
+  };
+  textStyles: {
+    [key: string]: any;
+  };
+  buttons: {
+    [key: string]: any;
+  };
+  space: Array<string | number>;
+  [key: string]: any;
+}
+
+export const defaultTheme: Theme = {
   name: 'Default',
   /* Colors */
   colors,
