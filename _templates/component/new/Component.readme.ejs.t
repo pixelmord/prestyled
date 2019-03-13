@@ -1,10 +1,10 @@
 ---
-to: src/components/<%= Name %>/<%= Name %>.readme.md
+to: src/components/<%= name %>/<%= name %>.readme.md
 ---
-### <%= Name %>
+### <%= name %>
 
 ```js
-import { <%= Name %> } from './components/<%= Name %>';
+import { <%= name %> } from './components/<%= name %>';
 ```
 
 <!-- STORY -->
