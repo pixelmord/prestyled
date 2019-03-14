@@ -13,7 +13,7 @@ storiesOf('Layout', module).add(
       <Box width={1 / 2} p={2} color={'black'} bg="aqua">
         flex
       </Box>
-      <Box width={1 / 2} p={2} color={'white'} bg="green">
+      <Box width={1 / 2} p={2} color={'black'} bg="green">
         box
       </Box>
     </Flex>
