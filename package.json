@@ -1,11 +1,12 @@
 {
   "name": "prestyled",
   "version": "0.2.0",
-  "description": "",
-  "main": "index.js",
+  "description": "components for styling web projects",
+  "main": "dist/index.js",
+  "private": true,
   "repository": "https://github.com/pixelmord/prestyled",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
     "storybook": "start-storybook -p 9009 -c .storybook",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
@@ -34,7 +35,7 @@
   },
   "keywords": [],
   "author": "Andreas Sahle <andreas.sahle@gmail.com> (https://pixelmord.github.io)",
-  "license": "GPL-2.0",
+  "license": "MIT",
   "dependencies": {
     "@emotion/cache": "^10.0.7",
     "@emotion/core": "^10.0.7",

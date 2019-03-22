@@ -1,8 +1,10 @@
 # Don't check auto-generated stuff into git
 coverage
 build
+dist
 node_modules
 stats.json
+storybook-static
 
 # Cruft
 .DS_Store
@@ -11,4 +13,3 @@ npm-debug.log
 .vscode
 
 .cache
-storybook-static

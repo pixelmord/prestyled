@@ -18,7 +18,8 @@
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "outDir": "dist"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "scripts"]
