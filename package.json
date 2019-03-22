@@ -1,6 +1,6 @@
 {
   "name": "prestyled",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "components for styling web projects",
   "main": "dist/index.js",
   "private": true,
