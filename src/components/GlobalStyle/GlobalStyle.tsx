@@ -4,14 +4,13 @@ import * as React from 'react';
 
 import { Theme } from '../../theme';
 
-export const GlobalStyle: React.FC<{}> = withTheme(
-  ({ theme: defaultTheme }) => {
-    const styles = (theme: Theme = defaultTheme) => css`
-      body {
-        color: ${theme.colors.text};
-        font-family: ${theme.fonts.text};
-      }
-    `;
-    return <Global styles={styles} />;
-  }
-);
+const GStyle: React.FC<{ theme: Theme }> = props => {
+  const styles = (theme: Theme) => css`
+    body {
+      color: ${theme.colors.text};
+      font-family: ${theme.fonts.text};
+    }
+  `;
+  return <Global styles={styles(props.theme)} />;
+};
+export const GlobalStyle: React.FC<{}> = withTheme(GStyle);

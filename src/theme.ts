@@ -59,6 +59,7 @@ export const grayScale = {
 
 export const colors = {
   ...baseColors,
+  ...grayScale,
   primary: baseColors.blue,
   text: grayScale.grayDarkest,
   msAppTileColor: grayScale.grayDarkest,
