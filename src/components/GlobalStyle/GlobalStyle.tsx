@@ -1,16 +1,17 @@
-import { Global } from '@emotion/core';
+import { css, Global } from '@emotion/core';
+import { withTheme } from 'emotion-theming';
 import * as React from 'react';
 
-export const GlobalStyle: React.FC<{}> = () => (
-  <Global
-    styles={{
-      '*': { boxSizing: 'border-box' },
-      'html, body': {
-        fontFamily:
-          'system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-        margin: 0,
-        padding: 0,
-      },
-    }}
-  />
+import { Theme } from '../../theme';
+
+export const GlobalStyle: React.FC<{}> = withTheme(
+  ({ theme: defaultTheme }) => {
+    const styles = (theme: Theme = defaultTheme) => css`
+      body {
+        color: ${theme.colors.text};
+        font-family: ${theme.fonts.text};
+      }
+    `;
+    return <Global styles={styles} />;
+  }
 );

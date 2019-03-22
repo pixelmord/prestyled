@@ -61,6 +61,7 @@ export const colors = {
   ...baseColors,
   primary: baseColors.blue,
   text: grayScale.grayDarkest,
+  msAppTileColor: grayScale.grayDarkest,
 };
 
 export const space = [
