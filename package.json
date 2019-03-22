@@ -1,6 +1,6 @@
 {
   "name": "prestyled",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "components for styling web projects",
   "main": "dist/index.js",
   "private": true,
@@ -9,7 +9,8 @@
     "build": "tsc",
     "storybook": "start-storybook -p 9009 -c .storybook",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "preversion": "yarn build"
   },
   "prettier": {
     "singleQuote": true,
