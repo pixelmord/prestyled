@@ -1,5 +1,5 @@
 import styled, { StyledComponent } from '@emotion/styled';
-import { PropsWithoutRef } from 'react';
+import { HTMLProps, PropsWithoutRef } from 'react';
 import {
   alignSelf,
   AlignSelfProps,
