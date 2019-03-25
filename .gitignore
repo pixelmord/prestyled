@@ -1,7 +1,6 @@
 # Don't check auto-generated stuff into git
 coverage
-build
-dist
+lib
 node_modules
 stats.json
 storybook-static
