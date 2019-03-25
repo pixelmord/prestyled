@@ -56,7 +56,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "storybook-addon-emotion-theme": "^2.1.0",
-    "storybook-readme": "^4.0.5",
+    "storybook-readme": "^5.0.1",
     "styled-system": "^4.0.1"
   },
   "devDependencies": {
