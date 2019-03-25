@@ -289,4 +289,3 @@ export const defaultTheme: Theme = {
   buttons,
   textStyles,
 };
-export default defaultTheme;

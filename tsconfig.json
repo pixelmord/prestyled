@@ -3,6 +3,8 @@
     "module": "commonjs",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "strict": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "allowJs": false,
     "jsx": "react",
