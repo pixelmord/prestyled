@@ -2,7 +2,7 @@
   "name": "prestyled",
   "version": "0.3.8",
   "description": "components for styling web projects",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
