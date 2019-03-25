@@ -3,7 +3,10 @@
   "version": "0.3.5",
   "description": "components for styling web projects",
   "main": "dist/index.js",
-  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "repository": "https://github.com/pixelmord/prestyled",
   "scripts": {
     "build": "tsc",
