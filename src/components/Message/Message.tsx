@@ -1,6 +1,6 @@
 import styled, { StyledComponent } from '@emotion/styled';
 import { HTMLProps, PropsWithoutRef } from 'react';
-import { Theme } from '../../theme';
+import { Theme } from '../../theme/index';
 
 export interface IMessageProps extends HTMLProps<HTMLDivElement> {}
 

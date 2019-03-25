@@ -2,7 +2,7 @@ import styled, { StyledComponent } from '@emotion/styled';
 import { PropsWithoutRef } from 'react';
 import { themeGet } from 'styled-system';
 
-import { Theme } from '../../theme';
+import { Theme } from '../../theme/index';
 import { ITextProps, Text } from '../Text';
 
 export const Paragraph: StyledComponent<

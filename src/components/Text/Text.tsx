@@ -24,7 +24,7 @@ import {
   themeGet,
 } from 'styled-system';
 
-import { Theme } from '../../theme';
+import { Theme } from '../../theme/index';
 
 export interface ITextProps
   extends ColorProps,

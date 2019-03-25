@@ -1,4 +1,4 @@
-export * from './theme';
+export * from './theme/index';
 
 export * from './components/Box';
 export * from './components/Button';

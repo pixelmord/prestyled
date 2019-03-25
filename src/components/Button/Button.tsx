@@ -9,7 +9,7 @@ import {
   FontWeightProps,
 } from 'styled-system';
 
-import { Theme } from '../../theme';
+import { Theme } from '../../theme/index';
 import { Box, IBoxProps } from '../Box';
 
 export interface IButtonProps

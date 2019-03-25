@@ -22,7 +22,7 @@ import {
   WidthProps,
 } from 'styled-system';
 
-import { Theme } from '../../theme';
+import { Theme } from '../../theme/index';
 
 export interface IBoxProps
   extends WidthProps,

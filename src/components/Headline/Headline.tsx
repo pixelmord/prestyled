@@ -1,7 +1,7 @@
 import styled, { StyledComponent } from '@emotion/styled';
 import * as React from 'react';
 
-import { Theme } from '../../theme';
+import { Theme } from '../../theme/index';
 import { ITextProps, Text } from '../Text';
 
 interface IHeadlineProps

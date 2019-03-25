@@ -1,7 +1,7 @@
 import styled, { StyledComponent } from '@emotion/styled';
 import { PropsWithoutRef } from 'react';
 
-import { Theme } from '../../theme';
+import { Theme } from '../../theme/index';
 import { Box, IBoxProps } from '../Box';
 
 export const Form: StyledComponent<
