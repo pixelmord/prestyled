@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json.schemastore.org/solidaritySchema",
+  "requirements": {
+    "Node": [
+      {
+        "rule": "cli",
+        "binary": "node",
+        "semver": "12.1.0"
+      }
+    ],
+    "Watchman": [
+      {
+        "rule": "cli",
+        "binary": "watchman",
+        "error": "Please install watchman on this machine. Refer to the official Watchman installation instructions for additional help.",
+        "platform": [
+          "darwin",
+          "linux"
+        ]
+      }
+    ],
+    "Package JSON": [
+      {
+        "rule": "file",
+        "location": "./package.json"
+      }
+    ],
+    "NPM": [
+      {
+        "rule": "cli",
+        "binary": "npm",
+        "semver": "6.9.0"
+      }
+    ],
+    "TypeScript": [
+      {
+        "rule": "cli",
+        "binary": "tsc",
+        "semver": "3.4.5"
+      }
+    ],
+    "Yarn": [
+      {
+        "rule": "cli",
+        "binary": "yarn",
+        "version": "--version",
+        "semver": "1.16.0"
+      }
+    ]
+  }
+}
