@@ -14,7 +14,9 @@
     "storybook": "start-storybook -p 9009 -c .storybook",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "preversion": "yarn build"
+    "preversion": "yarn build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "prettier": {
     "singleQuote": true,
@@ -61,7 +63,8 @@
     "react-dom": "^16.8.4",
     "storybook-addon-emotion-theme": "^2.1.0",
     "storybook-readme": "^5.0.1",
-    "styled-system": "^4.0.1"
+    "styled-system": "^4.0.1",
+    "snyk": "^1.192.3"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -96,5 +99,6 @@
   },
   "peerDependencies": {
     "@types/react": "^16.8.7"
-  }
+  },
+  "snyk": true
 }
