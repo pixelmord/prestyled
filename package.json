@@ -55,7 +55,7 @@
     "@storybook/theming": "^5.0.1",
     "emotion-theming": "^10.0.7",
     "html-loader": "^0.5.5",
-    "markdown-loader": "^5.0.0",
+    "markdown-loader": "^5.1.0",
     "polished": "^3.0.3",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
