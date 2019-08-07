@@ -2,10 +2,8 @@ import styled, { StyledComponent } from '@emotion/styled';
 import { HTMLProps, PropsWithoutRef } from 'react';
 import { Theme } from '../../theme/index';
 
-export interface IInputProps extends HTMLProps<HTMLInputElement> {}
-
 export const Input: StyledComponent<
   PropsWithoutRef<JSX.IntrinsicElements['input']>,
-  IInputProps,
+  HTMLProps<HTMLInputElement>,
   Theme
 > = styled('input')``;

@@ -1,28 +1,15 @@
 import styled, { StyledComponent } from '@emotion/styled';
 import { PropsWithoutRef } from 'react';
-import {
-  buttonStyle,
-  ButtonStyleProps,
-  fontSize,
-  FontSizeProps,
-  fontWeight,
-  FontWeightProps,
-} from 'styled-system';
+import { buttonStyle, ButtonStyleProps, fontSize, FontSizeProps, fontWeight, FontWeightProps } from 'styled-system';
 
 import { Theme } from '../../theme/index';
 import { Box, IBoxProps } from '../Box';
 
-export interface IButtonProps
-  extends IBoxProps,
-    ButtonStyleProps,
-    FontSizeProps,
-    FontWeightProps {}
+export interface ButtonProps extends IBoxProps, ButtonStyleProps, FontSizeProps, FontWeightProps {}
 
-export const Button: StyledComponent<
-  PropsWithoutRef<JSX.IntrinsicElements['button']>,
-  IButtonProps,
-  Theme
-> = styled(Box)`
+export const Button: StyledComponent<PropsWithoutRef<JSX.IntrinsicElements['button']>, ButtonProps, Theme> = styled(
+  Box
+)`
   appearance: 'none';
   display: 'inline-block';
   text-align: 'center';

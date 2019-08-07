@@ -2,10 +2,8 @@ import styled, { StyledComponent } from '@emotion/styled';
 import { HTMLProps, PropsWithoutRef } from 'react';
 import { Theme } from '../../theme/index';
 
-export interface IFormElementProps extends HTMLProps<HTMLDivElement> {}
-
 export const FormElement: StyledComponent<
   PropsWithoutRef<JSX.IntrinsicElements['div']>,
-  IFormElementProps,
+  HTMLProps<HTMLDivElement>,
   Theme
 > = styled('div')``;

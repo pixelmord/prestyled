@@ -21,12 +21,13 @@ import {
   TextAlignProps,
   textStyle,
   TextStyleProps,
-  themeGet,
 } from 'styled-system';
+
+import { themeGet } from '@styled-system/theme-get';
 
 import { Theme } from '../../theme/index';
 
-export interface ITextProps
+export interface TextProps
   extends ColorProps,
     FontFamilyProps,
     FontSizeProps,
@@ -38,11 +39,7 @@ export interface ITextProps
     TextAlignProps,
     TextStyleProps {}
 
-export const Text: StyledComponent<
-  PropsWithoutRef<JSX.IntrinsicElements['div']>,
-  ITextProps,
-  Theme
-> = styled('div')`
+export const Text: StyledComponent<PropsWithoutRef<JSX.IntrinsicElements['div']>, TextProps, Theme> = styled('div')`
   font-family: ${themeGet('fonts.text', 'sans-serif')};
   line-height: ${themeGet('lineHeights.standard', '1.6')};
   ${space}

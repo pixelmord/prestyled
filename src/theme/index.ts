@@ -1,14 +1,12 @@
 // tslint:disable: object-literal-sort-keys
-const createMediaQuery = (n: string) => `@media screen and (min-width:${n})`;
+const createMediaQuery = (n: string): string => `@media screen and (min-width:${n})`;
 
 const aliases = ['sm', 'md', 'lg', 'xl', 'xxl'];
-const breakpointStrings: string[] = [32, 40, 48, 64, 75].map(
-  (n: number) => n + 'em'
-);
+const breakpointStrings: string[] = [32, 40, 48, 64, 75].map((n: number): string => n + 'em');
 export const breakpoints: {
   [key: string]: string;
 } = breakpointStrings.reduce(
-  (acc, curr, index) => ({
+  (acc, curr, index): {} => ({
     ...acc,
     [`${aliases[index]}`]: curr,
   }),
@@ -18,7 +16,7 @@ export const breakpoints: {
 export const mediaQueries: {
   [key: string]: string;
 } = breakpointStrings.map(createMediaQuery).reduce(
-  (acc, curr, index) => ({
+  (acc, curr, index): {} => ({
     ...acc,
     [`${aliases[index]}`]: curr,
   }),
@@ -255,7 +253,7 @@ export interface Theme {
   fonts: {
     [key: string]: any;
   };
-  fontSizes: Array<string | number>;
+  fontSizes: (string | number)[];
   fontWeights: {
     [key: string]: number;
   };
@@ -271,7 +269,7 @@ export interface Theme {
   buttons: {
     [key: string]: any;
   };
-  space: Array<string | number>;
+  space: (string | number)[];
   [key: string]: any;
 }
 

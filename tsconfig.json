@@ -1,23 +1,11 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "lib": ["es5", "es6", "es7", "es2017", "dom"],
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "allowJs": false,
+    "target": "es2019",
+    "module": "esnext",
+    "moduleResolution": "node",
     "jsx": "react",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "declaration": true,
-    "allowSyntheticDefaultImports": true,
-    "outDir": "lib"
+    "esModuleInterop": true
   },
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules", "build", "scripts"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
