@@ -3,9 +3,9 @@ import { PropsWithoutRef } from 'react';
 import { buttonStyle, ButtonStyleProps, fontSize, FontSizeProps, fontWeight, FontWeightProps } from 'styled-system';
 
 import { Theme } from '../../theme/index';
-import { Box, IBoxProps } from '../Box';
+import { Box, BoxProps } from '../Box/index';
 
-export interface ButtonProps extends IBoxProps, ButtonStyleProps, FontSizeProps, FontWeightProps {}
+export interface ButtonProps extends BoxProps, ButtonStyleProps, FontSizeProps, FontWeightProps {}
 
 export const Button: StyledComponent<PropsWithoutRef<JSX.IntrinsicElements['button']>, ButtonProps, Theme> = styled(
   Box

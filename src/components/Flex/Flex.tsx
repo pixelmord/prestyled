@@ -12,7 +12,7 @@ import {
 } from 'styled-system';
 
 import { Theme } from '../../theme/index';
-import { Box, BoxProps } from '../Box';
+import { Box, BoxProps } from '../Box/index';
 
 export interface FlexProps extends BoxProps, FlexWrapProps, FlexDirectionProps, AlignItemsProps, JustifyContentProps {}
 
