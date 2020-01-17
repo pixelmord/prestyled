@@ -2,10 +2,10 @@
   "compilerOptions": {
     "target": "es2019",
     "module": "esnext",
-    "moduleResolution": "node",
     "jsx": "react",
-    "esModuleInterop": true
+    "skipLibCheck": true,
+    "moduleResolution": "node"
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "include": ["src/index.ts"],
+  "exclude": ["node_modules", "**/__tests__/*"]
 }
