@@ -248,10 +248,10 @@ export const base = {
 export interface Theme {
   name: string;
   colors: {
-    [key: string]: any;
+    [key: string]: string;
   };
   fonts: {
-    [key: string]: any;
+    [key: string]: string;
   };
   fontSizes: (string | number)[];
   fontWeights: {
@@ -264,13 +264,13 @@ export interface Theme {
     [key: string]: number | string;
   };
   textStyles: {
-    [key: string]: any;
+    [key: string]: {};
   };
   buttons: {
-    [key: string]: any;
+    [key: string]: {};
   };
   space: (string | number)[];
-  [key: string]: any;
+  [key: string]: string | number | {};
 }
 
 export const defaultTheme: Theme = {
