@@ -17,24 +17,24 @@ jobs:
       - name: Get yarn cache
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-
       - uses: actions/cache@v1
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - uses: borales/actions-yarn@v2.0.0
+      - name: Install Node Dependencies
+        uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.0.0
+      - name: Build Release Package
+        uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build # will run `yarn build` command
-      - name: Release
-        uses: borales/actions-yarn@v2.0.0
+      - name: Do Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
-          cmd: semantic-release # will run `yarn semantic-release` command
+          cmd: npx semantic-release # will run `yarn semantic-release` command
 
