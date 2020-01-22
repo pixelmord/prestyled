@@ -14,10 +14,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Get yarn cache
+      - name: Get yarn cache dir
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v1
+      - name: Prepare yarn cache
+        uses: actions/cache@v1
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
