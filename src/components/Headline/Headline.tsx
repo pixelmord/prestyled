@@ -1,7 +1,7 @@
 import styled, { StyledComponent } from '@emotion/styled';
 import * as React from 'react';
 
-import { Theme } from '../../theme/index';
+import { PrestyledTheme as Theme } from '../../theme/index';
 import { TextProps, Text } from '../Text/index';
 type As = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 interface HeadlineProps extends React.PropsWithoutRef<JSX.IntrinsicElements['h1']> {

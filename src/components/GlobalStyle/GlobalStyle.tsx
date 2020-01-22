@@ -2,7 +2,7 @@ import { css, Global, SerializedStyles } from '@emotion/core';
 import { withTheme } from 'emotion-theming';
 import * as React from 'react';
 
-import { Theme } from '../../theme/index';
+import { PrestyledTheme as Theme } from '../../theme/index';
 
 const GStyle: React.FC<{ theme: Theme }> = (props: { theme: Theme }): React.ReactElement => {
   const styles = (theme: Theme): SerializedStyles => css`

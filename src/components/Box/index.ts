@@ -1,1 +1,2 @@
-export * from './Box';
+import { Box } from 'theme-ui';
+export const Box = Box;

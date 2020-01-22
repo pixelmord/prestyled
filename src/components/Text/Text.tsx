@@ -25,7 +25,7 @@ import {
 
 import { themeGet } from '@styled-system/theme-get';
 
-import { Theme } from '../../theme/index';
+import { PrestyledTheme as Theme } from '../../theme/index';
 
 export interface TextProps
   extends ColorProps,

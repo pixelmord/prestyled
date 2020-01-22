@@ -24,7 +24,7 @@ import {
   MaxWidthProps,
 } from 'styled-system';
 
-import { Theme } from '../../theme/index';
+import { PrestyledTheme as Theme } from '../../theme/index';
 
 export interface BoxProps
   extends WidthProps,

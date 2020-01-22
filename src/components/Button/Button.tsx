@@ -2,7 +2,7 @@ import styled, { StyledComponent } from '@emotion/styled';
 import { PropsWithoutRef } from 'react';
 import { buttonStyle, ButtonStyleProps, fontSize, FontSizeProps, fontWeight, FontWeightProps } from 'styled-system';
 
-import { Theme } from '../../theme/index';
+import { PrestyledTheme as Theme } from '../../theme/index';
 import { Box, BoxProps } from '../Box/index';
 
 export interface ButtonProps extends BoxProps, ButtonStyleProps, FontSizeProps, FontWeightProps {}

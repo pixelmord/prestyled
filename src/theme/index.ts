@@ -1,4 +1,5 @@
 // tslint:disable: object-literal-sort-keys
+import { Theme } from 'theme-ui';
 const createMediaQuery = (n: string): string => `@media screen and (min-width:${n})`;
 
 const aliases = ['sm', 'md', 'lg', 'xl', 'xxl'];
@@ -257,38 +258,12 @@ export const styles = {
   },
 };
 
-export interface Theme {
+export interface PrestyledTheme extends Theme {
   name: string;
-  colors: {
-    [key: string]: string;
-  };
-  fonts: {
-    [key: string]: string;
-  };
-  fontSizes: (string | number)[];
-  fontWeights: {
-    [key: string]: number;
-  };
-  lineHeights: {
-    [key: string]: number;
-  };
-  letterSpacings: {
-    [key: string]: number | string;
-  };
-  textStyles: {
-    [key: string]: {};
-  };
-  buttons: {
-    [key: string]: {};
-  };
-  space: (string | number)[];
-  styles: {
-    [key: string]: {};
-  };
   [key: string]: string | number | {};
 }
 
-export const defaultTheme: Theme = {
+export const defaultTheme: PrestyledTheme = {
   name: 'Default',
   /* Colors */
   colors,
