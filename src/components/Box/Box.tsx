@@ -20,12 +20,15 @@ import {
   SpaceProps,
   width,
   WidthProps,
+  maxWidth,
+  MaxWidthProps,
 } from 'styled-system';
 
 import { Theme } from '../../theme/index';
 
 export interface BoxProps
   extends WidthProps,
+    MaxWidthProps,
     SpaceProps,
     ColorProps,
     ColorStyleProps,
@@ -39,6 +42,7 @@ export interface BoxProps
 export const Box: StyledComponent<PropsWithoutRef<JSX.IntrinsicElements['div']>, BoxProps, Theme> = styled('div')`
   box-sizing: border-box;
   ${space}
+  ${maxWidth}
   ${width}
   ${color}
   ${colorStyle}
