@@ -24,7 +24,8 @@
     "build": "yarn pika build",
     "storybook": "start-storybook -p 9009 -c .storybook",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "release": "yarn build"
   },
   "husky": {
     "hooks": {
