@@ -21,7 +21,7 @@
   "repository": "https://github.com/pixelmord/prestyled",
   "scripts": {
     "lint": "eslint './src/**/*' --fix",
-    "build": "pack build",
+    "build": "yarn pika build",
     "storybook": "start-storybook -p 9009 -c .storybook",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
