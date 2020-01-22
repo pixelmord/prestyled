@@ -1,5 +1,5 @@
 {
-  "name": "@pixelmord/prestyled",
+  "name": "prestyled",
   "version": "0.0.0-semantically-released",
   "description": "components for styling web projects",
   "@pika/pack": {
