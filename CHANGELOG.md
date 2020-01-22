@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/pixelmord/prestyled/compare/v0.4.0...v0.4.1) (2020-01-22)
+
+
+### Bug Fixes
+
+* **package:** use correct package name ([3bedd77](https://github.com/pixelmord/prestyled/commit/3bedd77775dfd777e23527524a243a53f5d12592))
+
 # [0.4.0](https://github.com/pixelmord/prestyled/compare/v0.3.16...v0.4.0) (2020-01-22)
 
 
