@@ -25,7 +25,8 @@
     "storybook": "start-storybook -p 9009 -c .storybook",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "release": "yarn build"
+    "presem": "yarn build",
+    "sem": "semantic-release"
   },
   "husky": {
     "hooks": {
