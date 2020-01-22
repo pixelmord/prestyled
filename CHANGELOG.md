@@ -1,3 +1,10 @@
+## [0.4.2](https://github.com/pixelmord/prestyled/compare/v0.4.1...v0.4.2) (2020-01-22)
+
+
+### Bug Fixes
+
+* **box:** add maxWidth ([cbdd102](https://github.com/pixelmord/prestyled/commit/cbdd10287eb06dfca005e51800b18ec383115e5e))
+
 ## [0.4.1](https://github.com/pixelmord/prestyled/compare/v0.4.0...v0.4.1) (2020-01-22)
 
 
