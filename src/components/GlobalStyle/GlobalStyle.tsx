@@ -5,7 +5,7 @@ import * as React from 'react';
 import { PrestyledTheme as Theme } from '../../theme/index';
 
 const GStyle: React.FC<{ theme: Theme }> = (props: { theme: Theme }): React.ReactElement => {
-  const styles = (theme: Theme): SerializedStyles => css`
+  const styles = (theme): SerializedStyles => css`
     body {
       color: ${theme.colors.text};
       font-family: ${theme.fonts.text};
