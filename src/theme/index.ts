@@ -59,6 +59,7 @@ export const colors = {
   ...baseColors,
   ...grayScale,
   primary: baseColors.blue,
+  background: baseColors.white,
   text: grayScale.grayDarkest,
   msAppTileColor: grayScale.grayDarkest,
 };
@@ -245,6 +246,17 @@ export const base = {
   speed: '.1s',
 };
 
+export const styles = {
+  root: {
+    fontFamily: 'body',
+    color: 'text',
+    bg: 'background',
+  },
+  p: {
+    color: 'text',
+  },
+};
+
 export interface Theme {
   name: string;
   colors: {
@@ -270,6 +282,9 @@ export interface Theme {
     [key: string]: {};
   };
   space: (string | number)[];
+  styles: {
+    [key: string]: {};
+  };
   [key: string]: string | number | {};
 }
 
@@ -286,4 +301,5 @@ export const defaultTheme: Theme = {
   base,
   buttons,
   textStyles,
+  styles,
 };
