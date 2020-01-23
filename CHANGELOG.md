@@ -1,3 +1,16 @@
+# [0.5.0](https://github.com/pixelmord/prestyled/compare/v0.4.2...v0.5.0) (2020-01-23)
+
+
+### Bug Fixes
+
+* **component:** type ([1f1407f](https://github.com/pixelmord/prestyled/commit/1f1407fc124a5db35dabe75bd4dde1c746ab4156))
+* **theme:** compatibility w theme-ui ([78c3728](https://github.com/pixelmord/prestyled/commit/78c372825854b795cef72c65cbae8c5dd12bb462))
+
+
+### Features
+
+* **components:** use theme-ui components ([aa470fa](https://github.com/pixelmord/prestyled/commit/aa470fa97cb128d345747753e3d0761292d39a85))
+
 ## [0.4.2](https://github.com/pixelmord/prestyled/compare/v0.4.1...v0.4.2) (2020-01-22)
 
 
