@@ -278,3 +278,5 @@ export const defaultTheme: PrestyledTheme = {
   textStyles,
   styles,
 };
+
+export default defaultTheme;
