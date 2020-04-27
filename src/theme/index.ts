@@ -223,8 +223,22 @@ export const textStyles = {
   },
 };
 
+const buttonCommon = {
+  'button + &': {
+    ml: 1,
+  },
+};
 export const buttons = {
+  default: {
+    ...buttonCommon,
+    color: 'text',
+    backgroundColor: 'grayLight',
+    '&:hover': {
+      backgroundColor: 'gray',
+    },
+  },
   primary: {
+    ...buttonCommon,
     color: 'white',
     backgroundColor: 'blue',
     '&:hover': {
