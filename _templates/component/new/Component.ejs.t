@@ -1,16 +1,8 @@
 ---
-to: src/components/<%= name %>/<%= name %>.tsx
+to: "<%= h.src() %>/components/<%= name %>/<%= name %>.tsx"
 ---
-import styled, { StyledComponent } from '@emotion/styled';
-import { HTMLProps, PropsWithoutRef } from 'react';
-import { Theme } from '../../theme';
+/** @jsx jsx */
+import { jsx, Box } from 'theme-ui';
 
-export interface I<%= name %>Props extends HTMLProps<HTMLDivElement> {}
-
-export const <%= name %>: StyledComponent<
-  PropsWithoutRef<JSX.IntrinsicElements['div']>,
-  I<%= name %>Props,
-  Theme
-> = styled('div')`
-
-`;
+export const <%= name %>: React.FC = (props: React.PropsWithChildren<{}>) => <Box {...props} />;
+export default <%= name %>;

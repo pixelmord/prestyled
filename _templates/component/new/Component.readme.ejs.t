@@ -1,10 +1,10 @@
 ---
-to: src/components/<%= name %>/<%= name %>.readme.md
+to: "<%= h.src() %>/components/<%= name %>/Readme.md"
 ---
 ### <%= name %>
 
 ```js
-import { <%= name %> } from './components/<%= name %>';
+  /** @jsx jsx */
+  import { jsx } from 'theme-ui';
+  <<%= name %>/>
 ```
-
-<!-- STORY -->
