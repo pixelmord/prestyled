@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx, Box, BoxProps } from 'theme-ui';
 import * as React from 'react';
-import { Input } from '../Input';
-import { Label } from '../Label';
+import { Input } from '../Input/index';
+import { Label } from '../Label/index';
 
 export type FormFieldProps = BoxProps & {
   label: string | React.ReactElement;

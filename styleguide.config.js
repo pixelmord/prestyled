@@ -3,7 +3,7 @@ module.exports = {
   sections: [
     {
       name: 'Project',
-      content: 'docs/introduction.md',
+      content: 'src/docs/introduction.md',
     },
     {
       name: 'Components',
