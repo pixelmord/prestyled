@@ -1,5 +1,31 @@
 module.exports = {
-  components: 'src/components/**/[A-Z]*.{ts,tsx}',
+  pagePerSection: true,
+  sections: [
+    {
+      name: 'Project',
+      content: 'docs/introduction.md',
+    },
+    {
+      name: 'Components',
+      components: 'src/components/**/[A-Z]*.{ts,tsx}',
+      exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
+      usageMode: 'collapse', // 'hide' | 'collapse' | 'expand'
+    },
+  ],
+  styles: {
+    Playground: {
+      preview: {
+        width: '100%',
+        display: 'inline-block',
+        padding: '0',
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        borderColor: 'rgb(232, 232, 232)',
+        borderImage: 'initial',
+        borderRadius: '3px',
+      },
+    },
+  },
   styleguideDir: 'docs',
   styleguideComponents: {
     Wrapper: __dirname + '/src/theme/ThemeWrapper.tsx',
