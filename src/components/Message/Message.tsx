@@ -1,5 +1,9 @@
-import styled, { StyledComponent } from '@emotion/styled';
-import { PropsWithoutRef } from 'react';
-import { PrestyledTheme as Theme } from '../../theme/index';
+/** @jsx jsx */
+import { jsx, Message as ThemeUiMessage, MessageProps } from 'theme-ui';
+import { PropsWithoutRef, PropsWithChildren } from 'react';
 
-export const Message: StyledComponent<PropsWithoutRef<JSX.IntrinsicElements['div']>, {}, Theme> = styled('div')``;
+export const Message: React.FC<MessageProps> = ({
+  variant = 'default',
+  ...rest
+}: PropsWithoutRef<PropsWithChildren<MessageProps>>) => <ThemeUiMessage {...rest} variant={variant} />;
+export default Message;

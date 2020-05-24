@@ -1,9 +1,9 @@
-import styled, { StyledComponent } from '@emotion/styled';
-import { HTMLProps, PropsWithoutRef } from 'react';
-import { PrestyledTheme as Theme } from '../../theme/index';
+/** @jsx jsx */
+import { jsx, Input as ThemeUiInput, InputProps } from 'theme-ui';
+import { PropsWithoutRef, PropsWithChildren } from 'react';
 
-export const Input: StyledComponent<
-  PropsWithoutRef<JSX.IntrinsicElements['input']>,
-  HTMLProps<HTMLInputElement>,
-  Theme
-> = styled('input')``;
+export const Input: React.FC<InputProps> = ({
+  variant = 'default',
+  ...rest
+}: PropsWithoutRef<PropsWithChildren<InputProps>>) => <ThemeUiInput {...rest} variant={variant} />;
+export default Input;
