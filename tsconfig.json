@@ -6,6 +6,6 @@
     "skipLibCheck": true,
     "moduleResolution": "node"
   },
-  "include": ["src/index.ts"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "include": ["src/index.ts", "**/*.ts", "**/*.tsx", "styleguide.config.js", "src/theme/.theme-ui-demo.ts"],
+  "exclude": ["node_modules", "**/__tests__/*", "src/refactor"]
 }
