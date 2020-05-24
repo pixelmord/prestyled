@@ -1,3 +1,20 @@
+# [0.6.0](https://github.com/pixelmord/prestyled/compare/v0.5.0...v0.6.0) (2020-05-24)
+
+
+### Bug Fixes
+
+* avoid h1 warnings for documentation files ([f56ed00](https://github.com/pixelmord/prestyled/commit/f56ed00c5051fa606b3379dfa947c9250459e50b))
+* use explicit paths for pika  bundling ([72ccd75](https://github.com/pixelmord/prestyled/commit/72ccd75f0125410bc96dd4e1a79738d858409488))
+
+
+### Features
+
+* more compoents shadowed from theme-ui ([6c80605](https://github.com/pixelmord/prestyled/commit/6c8060529c2f5b1c56d944dcee0078ad71364b5e))
+* shadow some theme-ui components ([128c119](https://github.com/pixelmord/prestyled/commit/128c1199f65152edce026038d7ab1273310fa7ea))
+* styleguide sections ([a97c6d5](https://github.com/pixelmord/prestyled/commit/a97c6d57bb2ba6941386205b726d599ad9b03339))
+* styleguidist setup and button conversion ([f700ed9](https://github.com/pixelmord/prestyled/commit/f700ed92b6f60f9fda269bf6002b4a60918e2b6d))
+* **styleguide:** remove storybook ([85523e1](https://github.com/pixelmord/prestyled/commit/85523e1ea381b2083d8d4dce7c5a7f32c4f7a54f))
+
 # [0.5.0](https://github.com/pixelmord/prestyled/compare/v0.4.2...v0.5.0) (2020-01-23)
 
 
