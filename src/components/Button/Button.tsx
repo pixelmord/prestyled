@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import { PropsWithoutRef } from 'react';
 import { jsx, Button as ThemeUiButton, ButtonProps } from 'theme-ui';
 
 export const Button: React.FC<ButtonProps> = (props: ButtonProps) => (
