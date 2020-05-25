@@ -1,5 +1,5 @@
 import theme from '@theme-ui/preset-tailwind';
-import { mediaQueries } from '../mediaQueries/index';
+import { mediaQueries } from '../mediaQueries';
 
 export const fonts = {
   heading: `system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,

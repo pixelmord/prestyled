@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx, ThemeProvider, useColorMode, Flex } from 'theme-ui';
-import theme from './index';
+import theme from '.';
 
 const ThemeSwitcher = () => {
   const [colorMode, setColorMode] = useColorMode();
   return (
     <button
-      onClick={(e) => {
+      onClick={() => {
         setColorMode(colorMode === 'default' ? 'dark' : 'default');
       }}
     >
@@ -14,7 +14,7 @@ const ThemeSwitcher = () => {
     </button>
   );
 };
-export const ThemeWrapper: React.FC = (props: { children: JSX.Element }) => {
+export const ThemeWrapper: React.FC = (props: React.PropsWithChildren<Record<string, unknown>>) => {
   return (
     <ThemeProvider theme={theme}>
       <div
