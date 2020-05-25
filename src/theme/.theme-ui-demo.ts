@@ -133,11 +133,7 @@ export default {
     },
   },
   cards: {
-    primary: {
-      padding: 2,
-      borderRadius: 4,
-      boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
-    },
+
     compact: {
       padding: 1,
       borderRadius: 2,
@@ -146,54 +142,10 @@ export default {
     },
   },
   forms: {
-    label: {
-      fontSize: 1,
-      fontWeight: 'bold',
-    },
-    input: {
-      borderColor: 'gray',
-      '&:focus': {
-        borderColor: 'primary',
-        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
-        outline: 'none',
-      },
-    },
-    select: {
-      borderColor: 'gray',
-      '&:focus': {
-        borderColor: 'primary',
-        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
-        outline: 'none',
-      },
-    },
-    textarea: {
-      borderColor: 'gray',
-      '&:focus': {
-        borderColor: 'primary',
-        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
-        outline: 'none',
-      },
-    },
-    slider: {
-      bg: 'muted',
-    },
+
   },
   alerts: {
-    primary: {
-      color: 'background',
-    },
-    secondary: {
-      color: 'background',
-      bg: 'secondary',
-    },
-    accent: {
-      color: 'background',
-      bg: 'accent',
-    },
-    highlight: {
-      color: 'text',
-      bg: 'highlight',
-    },
+
   },
   layout: {
     container: {
@@ -208,10 +160,7 @@ export default {
       lineHeight: 'body',
       fontWeight: 'body',
     },
-    img: {
-      maxWidth: '100%',
-      height: 'auto',
-    },
+
     h1: {
       variant: 'text.display',
     },
@@ -235,73 +184,6 @@ export default {
       variant: 'text.heading',
       fontSize: 1,
     },
-    a: {
-      color: 'primary',
-      '&:hover': {
-        color: 'secondary',
-      },
-    },
-    pre: {
-      fontFamily: 'monospace',
-      fontSize: 1,
-      p: 3,
-      color: 'text',
-      bg: 'muted',
-      overflow: 'auto',
-      code: {
-        color: 'inherit',
-      },
-      variant: 'prism',
-    },
-    code: {
-      fontFamily: 'monospace',
-      fontSize: 1,
-    },
-    inlineCode: {
-      fontFamily: 'monospace',
-      color: 'secondary',
-      bg: 'muted',
-    },
-    table: {
-      width: '100%',
-      my: 4,
-      borderCollapse: 'separate',
-      borderSpacing: 0,
-      'th, td': {
-        textAlign: 'left',
-        py: '4px',
-        pr: '4px',
-        pl: 0,
-        borderColor: 'muted',
-        borderBottomStyle: 'solid',
-      },
-    },
-    th: {
-      verticalAlign: 'bottom',
-      borderBottomWidth: '2px',
-    },
-    td: {
-      verticalAlign: 'top',
-      borderBottomWidth: '1px',
-    },
-    hr: {
-      border: 0,
-      borderBottom: '1px solid',
-      borderColor: 'muted',
-    },
-    xray: {
-      '*': {
-        outline: '1px solid rgba(0, 192, 255, .25)',
-      },
-    },
-    navlink: {
-      display: 'inline-block',
-      fontWeight: 'bold',
-      color: 'inherit',
-      textDecoration: 'none',
-      ':hover,:focus': {
-        color: 'primary',
-      },
-    },
+
   },
 };

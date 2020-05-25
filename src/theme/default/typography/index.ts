@@ -55,6 +55,10 @@ export const styles = {
     color: 'text',
     bg: 'background',
   },
+  img: {
+    maxWidth: '100%',
+    height: 'auto',
+  },
   p: {
     color: 'text',
   },
@@ -145,6 +149,73 @@ export const styles = {
       '& + h1, & + h2, & + h3, & + h4, & + h5, & + h6': {
         marginTop: `calc(${fontSizes[13]} * -0.7)`,
       },
+    },
+  },
+  a: {
+    color: 'primary',
+    '&:hover': {
+      color: 'secondary',
+    },
+  },
+  pre: {
+    fontFamily: 'monospace',
+    fontSize: 1,
+    p: 3,
+    color: 'text',
+    bg: 'muted',
+    overflow: 'auto',
+    code: {
+      color: 'inherit',
+    },
+  },
+  code: {
+    fontFamily: 'monospace',
+    fontSize: 1,
+  },
+  inlineCode: {
+    fontFamily: 'monospace',
+    color: 'secondary',
+    bg: 'muted',
+  },
+  table: {
+    width: '100%',
+    my: 4,
+    borderCollapse: 'separate',
+    borderSpacing: 0,
+    'th, td': {
+      textAlign: 'left',
+      py: '4px',
+      pr: '4px',
+      pl: 0,
+      borderColor: 'muted',
+      borderBottomStyle: 'solid',
+    },
+  },
+  th: {
+    verticalAlign: 'bottom',
+    borderBottomWidth: '2px',
+  },
+  td: {
+    verticalAlign: 'top',
+    borderBottomWidth: '1px',
+  },
+  hr: {
+    border: 0,
+    borderBottom: '1px solid',
+    borderColor: 'muted',
+  },
+  xray: {
+    '*': {
+      outline: '1px solid rgba(0, 192, 255, .25)',
+    },
+  },
+  navlink: {
+    display: 'inline-block',
+    fontWeight: 'bold',
+    color: 'inherit',
+    textDecoration: 'none',
+    ':hover,:focus': {
+      color: 'primary',
     },
   },
 };
