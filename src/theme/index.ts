@@ -1,23 +1,23 @@
 import { Theme } from 'theme-ui';
 
-import { alerts } from './default/alerts/index';
-import { badges } from './default/badges/index';
-import { borders, borderStyles, borderWidths } from './default/border/index';
-import { buttons } from './default/buttons/index';
-import { cards } from './default/cards/index';
-import { colors } from './default/colors/index';
-import { forms } from './default/forms/index';
-import { grids } from './default/grids/index';
-import { images } from './default/images/index';
-import { links } from './default/links/index';
-import { mediaQueries } from './default/mediaQueries/index';
-import { messages } from './default/messages/index';
-import { opacities } from './default/opacities/index';
-import { radii } from './default/radii/index';
-import { shadows } from './default/shadows/index';
-import { space, sizes } from './default/sizing/index';
-import { styles, fonts, fontSizes, fontWeights, lineHeights, letterSpacings, text } from './default/typography/index';
-import { zIndices } from './default/zIndices/index';
+import { alerts } from './default/alerts';
+import { badges } from './default/badges';
+import { borders, borderStyles, borderWidths } from './default/border';
+import { buttons } from './default/buttons';
+import { cards } from './default/cards';
+import { colors } from './default/colors';
+import { forms } from './default/forms';
+import { grids } from './default/grids';
+import { images } from './default/images';
+import { links } from './default/links';
+import { mediaQueries } from './default/mediaQueries';
+import { messages } from './default/messages';
+import { opacities } from './default/opacities';
+import { radii } from './default/radii';
+import { shadows } from './default/shadows';
+import { space, sizes } from './default/sizing';
+import { styles, fonts, fontSizes, fontWeights, lineHeights, letterSpacings, text } from './default/typography';
+import { zIndices } from './default/zIndices';
 
 export interface PrestyledTheme extends Theme {
   name: string;

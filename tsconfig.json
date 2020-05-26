@@ -1,11 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es2020",
     "module": "esnext",
-    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "allowJs": true,
     "skipLibCheck": true,
-    "moduleResolution": "node"
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*", "node_modules/*"]
+    },
+    "jsx": "react",
+    "esModuleInterop": true
   },
-  "include": ["src/index.ts", "**/*.ts", "**/*.tsx", "styleguide.config.js", "src/theme/.theme-ui-demo.ts"],
-  "exclude": ["node_modules", "**/__tests__/*", "src/refactor"]
+  "include": ["src", "types"],
+  "exclude": ["node_modules", "**/__tests__/*"]
 }
