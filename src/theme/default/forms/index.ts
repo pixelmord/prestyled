@@ -1,5 +1,5 @@
 import theme from '@theme-ui/preset-tailwind';
-
+import { Theme } from 'theme-ui';
 export const forms = {
   ...(theme.forms && theme.forms),
   label: {
@@ -10,7 +10,7 @@ export const forms = {
     borderColor: 'gray',
     '&:focus': {
       borderColor: 'primary',
-      boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+      boxShadow: (t: Theme): string => `0 0 0 2px ${t.colors?.primary}`,
       outline: 'none',
     },
   },
@@ -18,7 +18,7 @@ export const forms = {
     borderColor: 'gray',
     '&:focus': {
       borderColor: 'primary',
-      boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+      boxShadow: (t: Theme): string => `0 0 0 2px ${t.colors?.primary}`,
       outline: 'none',
     },
   },
@@ -26,7 +26,7 @@ export const forms = {
     borderColor: 'gray',
     '&:focus': {
       borderColor: 'primary',
-      boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+      boxShadow: (t: Theme): string => `0 0 0 2px ${t.colors?.primary}`,
       outline: 'none',
     },
   },
