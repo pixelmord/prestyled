@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, ThemeProvider, useColorMode, Flex } from 'theme-ui';
-import theme from '.';
+import { defaultTheme as theme } from '.';
 
 const ThemeSwitcher = () => {
   const [colorMode, setColorMode] = useColorMode();

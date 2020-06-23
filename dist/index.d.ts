@@ -15,6 +15,8 @@ export * from './components/IconButton';
 export * from './components/Image';
 export * from './components/Input';
 export * from './components/Label';
+export * from './components/LandingPageSection';
+export * from './components/LandingPageSectionContent';
 export * from './components/Link';
 export * from './components/MenuButton';
 export * from './components/Message';

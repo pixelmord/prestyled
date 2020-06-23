@@ -1,0 +1,30 @@
+export declare const grayScale: {
+  grayBlack: string;
+  grayDarkest: string;
+  grayDarker: string;
+  grayDark: string;
+  gray: string;
+  grayLight: string;
+  grayLighter: string;
+  grayLightest: string;
+};
+export declare const colors: {
+  primaryDarkest: string;
+  primaryDarker: string;
+  primaryDark: string;
+  primary: string;
+  primaryLight: string;
+  primaryLighter: string;
+  primaryLightest: string;
+  msAppTileColor: string;
+  background: string;
+  text: string;
+  grayBlack: string;
+  grayDarkest: string;
+  grayDarker: string;
+  grayDark: string;
+  gray: string;
+  grayLight: string;
+  grayLighter: string;
+  grayLightest: string;
+};

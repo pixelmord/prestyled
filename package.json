@@ -28,7 +28,7 @@
   "repository": "https://github.com/pixelmord/prestyled",
   "scripts": {
     "start": "tsdx watch",
-    "poststart": "yarn styleguide",
+    "dev": "yarn start",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
