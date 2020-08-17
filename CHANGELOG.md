@@ -1,3 +1,11 @@
+# [0.7.0](https://github.com/pixelmord/prestyled/compare/v0.6.0...v0.7.0) (2020-06-13)
+
+
+### Features
+
+* add sizes for section content ([8cadf5e](https://github.com/pixelmord/prestyled/commit/8cadf5ee4288f85931043b6ef2333ac8b2b2537d))
+* add theme tokens from demo ([013a32b](https://github.com/pixelmord/prestyled/commit/013a32b363d389c3d6033604a8a560f7d20be8fe))
+
 # [0.6.0](https://github.com/pixelmord/prestyled/compare/v0.5.0...v0.6.0) (2020-05-24)
 
 
