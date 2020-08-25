@@ -1,3 +1,16 @@
+# [0.8.0](https://github.com/pixelmord/prestyled/compare/v0.7.0...v0.8.0) (2020-08-25)
+
+
+### Bug Fixes
+
+* dependencies ([b01eeef](https://github.com/pixelmord/prestyled/commit/b01eeefdf1a73becd015cb8a0ce94a0149b4d21d))
+* updated deps ([ee7b44c](https://github.com/pixelmord/prestyled/commit/ee7b44cf932410f7f91d06cd6454ec950e9a3fbf))
+
+
+### Features
+
+* add page section components ([bdbeb48](https://github.com/pixelmord/prestyled/commit/bdbeb488343d9782fb8a42a4f194345e1fc4dc41))
+
 # [0.7.0](https://github.com/pixelmord/prestyled/compare/v0.6.0...v0.7.0) (2020-06-13)
 
 
