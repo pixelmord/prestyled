@@ -8,6 +8,7 @@ export declare type FormFieldProps = BoxProps & {
 declare const Field: React.ForwardRefExoticComponent<
   Pick<
     FormFieldProps,
+    | 'variant'
     | 'label'
     | 'p'
     | 'slot'
@@ -265,10 +266,9 @@ declare const Field: React.ForwardRefExoticComponent<
     | 'onAnimationIterationCapture'
     | 'onTransitionEnd'
     | 'onTransitionEndCapture'
-    | 'css'
     | 'sx'
     | 'as'
-    | 'variant'
+    | 'css'
     | 'm'
     | 'margin'
     | 'mt'

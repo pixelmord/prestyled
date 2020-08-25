@@ -1,16 +1,14 @@
 ### LandingPageSectionContent (variant:'default')
 
 ```js
-  <LandingPageSectionContent />
+<LandingPageSectionContent />
 ```
 
-### Variants of LandingPageSectionContent
+### Usage of LandingPageSectionContent
 
 ```js
-  <LandingPageSectionContent variant="default" />
-  <LandingPageSectionContent variant="primary" />
-  <LandingPageSectionContent variant="secondary" />
-  <LandingPageSectionContent variant="outline" />
-  <LandingPageSectionContent variant="accent" />
-  <LandingPageSectionContent variant="muted" />
+import { LandingPageSection } from '../LandingPageSection';
+<LandingPageSection variant="primary">
+  <LandingPageSectionContent>Content of a Landing Page Section</LandingPageSectionContent>
+</LandingPageSection>;
 ```

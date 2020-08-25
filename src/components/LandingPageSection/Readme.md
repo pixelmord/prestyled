@@ -8,7 +8,7 @@
 
 ```js
   <LandingPageSection variant="default" />
-  <LandingPageSection variant="primary" />
+  <LandingPageSection variant="primary">This is a primary Section</LandingPageSection>
   <LandingPageSection variant="secondary" />
   <LandingPageSection variant="outline" />
   <LandingPageSection variant="accent" />
