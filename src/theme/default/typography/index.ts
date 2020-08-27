@@ -54,6 +54,7 @@ export const styles = {
     fontFamily: 'body',
     color: 'text',
     bg: 'background',
+    lineHeight: 1.6,
   },
   img: {
     maxWidth: '100%',
