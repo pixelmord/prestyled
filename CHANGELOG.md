@@ -1,3 +1,10 @@
+# [0.9.0](https://github.com/pixelmord/prestyled/compare/v0.8.0...v0.9.0) (2020-08-29)
+
+
+### Features
+
+* **typography:** set body line-height ([bb36ea9](https://github.com/pixelmord/prestyled/commit/bb36ea9aa39de2f2ce22fa77fdc0b63250d710df))
+
 # [0.8.0](https://github.com/pixelmord/prestyled/compare/v0.7.0...v0.8.0) (2020-08-25)
 
 

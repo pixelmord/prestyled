@@ -335,7 +335,8 @@ var styles = /*#__PURE__*/_extends( /*#__PURE__*/_extends({}, theme.styles), {},
   root: {
     fontFamily: 'body',
     color: 'text',
-    bg: 'background'
+    bg: 'background',
+    lineHeight: 1.6
   },
   img: {
     maxWidth: '100%',
