@@ -8,6 +8,8 @@ var theme = _interopDefault(require('@theme-ui/preset-tailwind'));
 var color = require('@theme-ui/color');
 var themeUi = require('theme-ui');
 var React = require('react');
+var styledSystem = require('styled-system');
+var styled = _interopDefault(require('@emotion/styled'));
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -1198,6 +1200,36 @@ var Spinner = function Spinner(_ref) {
   }));
 };
 
+var px = function px(value) {
+  return typeof value === 'number' ? value + "px" : value;
+};
+
+var getMinMaxValue = function getMinMaxValue(value, scale) {
+  if (scale === void 0) {
+    scale = [];
+  }
+
+  return px(scale[value] || value);
+};
+
+var Stack = /*#__PURE__*/styled(themeUi.Box)({
+  display: 'grid'
+}, styledSystem.grid, /*#__PURE__*/styledSystem.system({
+  minColumnWidth: {
+    property: 'gridTemplateColumns',
+    scale: 'space',
+    transform: function transform(value, scale) {
+      return value ? "repeat(auto-fit, minmax(" + getMinMaxValue(value, scale) + ", 1fr))" : null;
+    }
+  },
+  numColumns: {
+    property: 'gridTemplateColumns',
+    transform: function transform(value) {
+      return value ? "repeat(" + value + ", 1fr)" : null;
+    }
+  }
+}));
+
 var Text = function Text(_ref) {
   var _ref$variant = _ref.variant,
       variant = _ref$variant === void 0 ? 'default' : _ref$variant,
@@ -1247,6 +1279,7 @@ exports.Radio = Radio;
 exports.Select = Select;
 exports.Slider = Slider;
 exports.Spinner = Spinner;
+exports.Stack = Stack;
 exports.Text = Text;
 exports.Textarea = Textarea;
 exports.defaultTheme = defaultTheme;

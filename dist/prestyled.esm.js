@@ -2,6 +2,8 @@ import theme from '@theme-ui/preset-tailwind';
 import { transparentize } from '@theme-ui/color';
 import { jsx, Alert as Alert$1, Badge as Badge$1, Avatar as Avatar$1, Button as Button$1, Card as Card$1, Checkbox as Checkbox$1, Close as Close$1, Divider as Divider$1, Donut as Donut$1, Embed as Embed$1, Input as Input$1, Label as Label$1, Box, Heading as Heading$1, IconButton as IconButton$1, Image as Image$1, Link as Link$1, MenuButton as MenuButton$1, Message as Message$1, NavLink as NavLink$1, Progress as Progress$1, Radio as Radio$1, Select as Select$1, Slider as Slider$1, Spinner as Spinner$1, Text as Text$1, Textarea as Textarea$1 } from 'theme-ui';
 import { forwardRef } from 'react';
+import { grid, system } from 'styled-system';
+import styled from '@emotion/styled';
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -1192,6 +1194,36 @@ var Spinner = function Spinner(_ref) {
   }));
 };
 
+var px = function px(value) {
+  return typeof value === 'number' ? value + "px" : value;
+};
+
+var getMinMaxValue = function getMinMaxValue(value, scale) {
+  if (scale === void 0) {
+    scale = [];
+  }
+
+  return px(scale[value] || value);
+};
+
+var Stack = /*#__PURE__*/styled(Box)({
+  display: 'grid'
+}, grid, /*#__PURE__*/system({
+  minColumnWidth: {
+    property: 'gridTemplateColumns',
+    scale: 'space',
+    transform: function transform(value, scale) {
+      return value ? "repeat(auto-fit, minmax(" + getMinMaxValue(value, scale) + ", 1fr))" : null;
+    }
+  },
+  numColumns: {
+    property: 'gridTemplateColumns',
+    transform: function transform(value) {
+      return value ? "repeat(" + value + ", 1fr)" : null;
+    }
+  }
+}));
+
 var Text = function Text(_ref) {
   var _ref$variant = _ref.variant,
       variant = _ref$variant === void 0 ? 'default' : _ref$variant,
@@ -1212,5 +1244,5 @@ var Textarea = function Textarea(_ref) {
   }));
 };
 
-export { Alert, Avatar, Badge, Button, Card, Checkbox, Close, Close as CloseButton, Divider, Donut, Embed, Field, Field as FormField, Heading, IconButton, Image, Input, Label, LandingPageSection, LandingPageSectionContent, Link, MenuButton, Message, NavLink, Progress, Radio, Select, Slider, Spinner, Text, Textarea, defaultTheme, portfolioBlueTheme };
+export { Alert, Avatar, Badge, Button, Card, Checkbox, Close, Close as CloseButton, Divider, Donut, Embed, Field, Field as FormField, Heading, IconButton, Image, Input, Label, LandingPageSection, LandingPageSectionContent, Link, MenuButton, Message, NavLink, Progress, Radio, Select, Slider, Spinner, Stack, Text, Textarea, defaultTheme, portfolioBlueTheme };
 //# sourceMappingURL=prestyled.esm.js.map

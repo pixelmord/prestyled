@@ -26,5 +26,6 @@ export * from './components/Radio';
 export * from './components/Select';
 export * from './components/Slider';
 export * from './components/Spinner';
+export * from './components/Stack';
 export * from './components/Text';
 export * from './components/Textarea';
