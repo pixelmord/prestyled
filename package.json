@@ -52,10 +52,12 @@
     ]
   },
   "dependencies": {
+    "@emotion/styled": "^10.0.27",
     "@theme-ui/color": "^0.3.1",
     "@theme-ui/preset-tailwind": "^0.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "styled-system": "^5.1.5",
     "theme-ui": "^0.3.1"
   },
   "peerDependencies": {
@@ -83,8 +85,8 @@
     "@types/react": "^16.9.47",
     "@types/react-dom": "^16.9.8",
     "@types/semantic-release": "^17.1.0",
+    "@types/styled-system": "^5.1.10",
     "@types/theme-ui": "^0.3.6",
-    "@types/theme-ui__components": "^0.2.5",
     "@types/webpack": "^4.41.21",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
