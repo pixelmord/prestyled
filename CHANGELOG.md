@@ -1,3 +1,10 @@
+# [0.10.0](https://github.com/pixelmord/prestyled/compare/v0.9.0...v0.10.0) (2020-09-06)
+
+
+### Features
+
+* **components:** add stack ([fed3f2f](https://github.com/pixelmord/prestyled/commit/fed3f2fdc2d6237dc3e6c5e4d86d6e6bb49acf56))
+
 # [0.9.0](https://github.com/pixelmord/prestyled/compare/v0.8.0...v0.9.0) (2020-08-29)
 
 
