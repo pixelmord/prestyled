@@ -32,12 +32,13 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "yarn run snyk-protect && tsdx build",
     "postbuild": "yarn styleguide:build",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "presem": "yarn build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "snyk-protect": "snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -58,7 +59,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-system": "^5.1.5",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "^0.3.1",
+    "@snyk/protect": "latest"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -140,5 +142,6 @@
         }
       ]
     ]
-  }
+  },
+  "snyk": true
 }
