@@ -17,7 +17,7 @@ const BEJAMAS_ASTRO_FONTS = [
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://pixelmord.github.io",
+  site: "https://pixelmord.de",
   base: "/prestyled",
   fonts: BEJAMAS_ASTRO_FONTS,
   integrations: [],
