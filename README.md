@@ -1,135 +1,73 @@
-# bejamas/ui monorepo template
+# Prestyled
 
-This template is for creating a monorepo with bejamas/ui.
+A component and component theming showcase and documentation site — component library, live showcase, and docs in one pnpm + Turborepo monorepo.
 
-## Using this example
+**Live showcase:** https://pixelmord.de/prestyled/
 
-Run the following command:
+## Project structure
+
+```
+apps/
+  web/    # Component & theming showcase (Astro, deployed to GitHub Pages)
+  docs/   # Documentation site (Astro + Starlight)
+packages/
+  ui/                # @repo/ui — Astro component library (shadcn-style, Tailwind CSS v4)
+  eslint-config/     # Shared ESLint configurations
+  typescript-config/ # Shared tsconfig presets
+```
+
+Components in `@repo/ui` live under `packages/ui/src/components/` and are exported per-component (`@repo/ui/components/*`), with global theme tokens in `@repo/ui/styles/globals.css`. Both apps consume the library via workspace protocol (`workspace:*`).
+
+## Requirements
+
+- Node.js >= 22.12
+- pnpm (enabled via `packageManager` field / Corepack)
+
+## Getting started
 
 ```sh
-bunx bejamas@latest init
+pnpm install
 ```
 
-## What's inside?
+## Development
 
-This Turborepo includes the following packages/apps:
+Run all apps and packages in dev mode:
 
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+```sh
+pnpm dev
 ```
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+Or target a specific app with a [Turborepo filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
+```sh
+pnpm exec turbo dev --filter=web    # showcase
+pnpm exec turbo dev --filter=docs   # documentation site
 ```
 
-### Develop
+## Build
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
+```sh
+pnpm build        # build all apps/packages
+pnpm build:fast   # skip doc-content generation where supported
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+Build a single app:
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
+```sh
+pnpm exec turbo build --filter=web
 ```
 
-### Remote Caching
+## Lint, type check & format
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
+```sh
+pnpm lint         # ESLint across the workspace
+pnpm check-types  # TypeScript project checks
+pnpm format       # Prettier (with the Astro plugin)
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## Deployment
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+The showcase (`apps/web`) is deployed to **GitHub Pages** via [GitHub Actions](.github/workflows/deploy.yml) on every push to `main`.
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+- Site URL: `https://pixelmord.de/prestyled/` (see `site`/`base` in `apps/web/astro.config.mjs`)
+- The workflow builds with `pnpm --filter web build` and deploys the `apps/web/dist` artifact
