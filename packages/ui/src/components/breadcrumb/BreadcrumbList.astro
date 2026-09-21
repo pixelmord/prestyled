@@ -1,0 +1,26 @@
+---
+import { cva } from "class-variance-authority";
+import { cn } from "@repo/ui/lib/utils";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"ol"> {
+  class?: string;
+}
+
+const {
+  class: className = "",
+  ...rest
+} = Astro.props as Props;
+
+const listVariants = cva(
+  "flex flex-wrap items-center wrap-break-word",
+);
+---
+
+<ol
+  {...rest}
+  data-slot="breadcrumb-list"
+  class={cn("text-muted-foreground gap-1.5 text-sm sm:gap-2.5", listVariants(), className)}
+>
+  <slot />
+</ol>

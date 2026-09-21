@@ -1,0 +1,25 @@
+---
+import { cn } from "@repo/ui/lib/utils";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"li"> {
+  class?: string;
+}
+
+const {
+  class: className = "",
+  ...rest
+} = Astro.props as Props;
+---
+
+<li
+  {...rest}
+  role="presentation"
+  aria-hidden="true"
+  data-slot="breadcrumb-separator"
+  class={cn("[&>svg]:size-3.5", className)}
+>
+  <slot>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class=""><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 6l6 6l-6 6"/></svg>
+  </slot>
+</li>

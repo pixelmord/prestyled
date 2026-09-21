@@ -1,0 +1,18 @@
+---
+import { cn } from "@repo/ui/lib/utils";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"div"> {
+  class?: string;
+}
+
+const { class: className = "", ...rest } = Astro.props as Props;
+---
+
+<div
+  data-slot="dialog-header"
+  class={cn("gap-2 flex flex-col", className)}
+  {...rest}
+>
+  <slot />
+</div>

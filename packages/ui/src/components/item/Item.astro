@@ -1,0 +1,93 @@
+---
+/**
+ * @component Item
+ * @title Item
+ * @description A versatile component for displaying any content, combining elements like title, description, media, and actions.
+ * @figmaUrl https://www.figma.com/design/koxai7zw5vIuBzuVxe5T2l/bejamas-ui?node-id=2525-7378&t=YFStJ3V8fXEO8QD8-4
+ *
+ * @preview
+ *
+ * <div class="flex w-full max-w-md flex-col gap-6">
+ *   <Item variant="outline">
+ *     <ItemContent>
+ *       <ItemTitle>Basic Item</ItemTitle>
+ *       <ItemDescription>A simple item with title and description.</ItemDescription>
+ *     </ItemContent>
+ *     <ItemActions><Button variant="outline" size="sm">Action</Button></ItemActions>
+ *   </Item>
+ * </div>
+ *
+ * @usage
+ *
+ * ```astro nocollapse
+ * ---
+ * import { Item, ItemContent, ItemTitle, ItemDescription, ItemActions, ItemMedia } from '@bejamas/ui/components/item';
+ * ---
+ *
+ * <Item variant="outline">
+ *   <ItemContent>
+ *     <ItemTitle>Basic Item</ItemTitle>
+ *     <ItemDescription>A simple item.</ItemDescription>
+ *   </ItemContent>
+ *   <ItemActions>
+ *     <Button variant="outline" size="sm">Action</Button>
+ *   </ItemActions>
+ * </Item>
+ * ```
+ */
+
+import type { HTMLAttributes } from "astro/types";
+import { cva } from "class-variance-authority";
+import { cn } from "@repo/ui/lib/utils";
+
+type ItemRootVariant = "default" | "outline" | "muted";
+type ItemRootSize = "default" | "sm";
+
+interface Props extends HTMLAttributes<"div"> {
+  variant?: ItemRootVariant;
+  size?: ItemRootSize;
+  class?: string;
+}
+
+const {
+  class: className = "",
+  variant = "default",
+  size = "default",
+  ...rest
+} = Astro.props as Props;
+
+const itemVariants = cva(
+  "group/item flex flex-wrap items-center outline-none transition-colors",
+  {
+    variants: {
+      variant: {
+        default: "border-transparent",
+        outline: "border-border",
+        muted: "bg-muted/50 border-transparent",
+      },
+      size: {
+        default: "gap-3.5 px-4 py-3.5",
+        sm: "gap-2.5 px-3 py-2.5",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  },
+);
+---
+
+<div
+  {...rest}
+  data-slot="item"
+  data-variant={variant}
+  data-size={size}
+  class={cn(
+    "[a]:hover:bg-muted rounded-md border text-sm rounded-lg",
+    itemVariants({ variant, size }),
+    className,
+  )}
+>
+  <slot />
+</div>

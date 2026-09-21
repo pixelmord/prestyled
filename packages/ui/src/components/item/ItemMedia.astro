@@ -1,0 +1,47 @@
+---
+import { cva } from "class-variance-authority";
+import { cn } from "@repo/ui/lib/utils";
+import type { HTMLAttributes } from "astro/types";
+
+type ItemMediaVariant = "default" | "icon" | "image";
+
+interface Props extends HTMLAttributes<"div"> {
+  mediaVariant?: ItemMediaVariant;
+  class?: string;
+}
+
+const {
+  class: className = "",
+  mediaVariant = "default",
+  ...rest
+} = Astro.props as Props;
+
+const itemMediaVariants = cva(
+  "flex shrink-0 items-center justify-center [&_svg]:pointer-events-none group-has-[[data-slot=item-description]]/item:self-start group-has-[[data-slot=item-description]]/item:translate-y-0.5",
+  {
+    variants: {
+      variant: {
+        default: "bg-transparent",
+        icon: "[&_svg:not([class*='size-'])]:size-4",
+        image:
+          "size-10 overflow-hidden rounded-sm group-data-[size=sm]/item:size-8 group-data-[size=xs]/item:size-6 [&_img]:size-full [&_img]:object-cover",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  },
+);
+---
+
+<div
+  {...rest}
+  data-slot="item-media"
+  class={cn(
+    "gap-2 group-has-data-[slot=item-description]/item:translate-y-0.5 group-has-data-[slot=item-description]/item:self-start",
+    itemMediaVariants({ variant: mediaVariant }),
+    className,
+  )}
+>
+  <slot />
+</div>

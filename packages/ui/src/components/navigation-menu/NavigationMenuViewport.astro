@@ -1,0 +1,19 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { cn } from "@repo/ui/lib/utils";
+
+interface Props extends HTMLAttributes<"div"> {
+  class?: string;
+}
+
+const { class: className = "", ...rest } = Astro.props as Props;
+---
+
+<div
+  {...rest}
+  data-slot="navigation-menu-viewport"
+  class={cn(
+    "bg-popover text-popover-foreground data-open:animate-in data-closed:animate-out data-closed:zoom-out-90 data-open:zoom-in-90 ring-foreground/10 rounded-lg shadow ring-1 duration-100 relative size-full overflow-hidden",
+    className,
+  )}
+></div>

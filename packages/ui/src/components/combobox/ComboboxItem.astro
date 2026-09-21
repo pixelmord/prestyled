@@ -1,0 +1,39 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { cn } from "@repo/ui/lib/utils";
+
+interface Props extends HTMLAttributes<"div"> {
+  value: string;
+  label?: string;
+  disabled?: boolean;
+  class?: string;
+}
+
+const {
+  value,
+  label,
+  disabled = false,
+  class: className = "",
+  ...rest
+} = Astro.props as Props;
+---
+
+<div
+  {...rest}
+  data-slot="combobox-item"
+  data-value={value}
+  data-label={label}
+  data-disabled={disabled ? "" : undefined}
+  class={cn(
+    "data-highlighted:bg-accent data-highlighted:text-accent-foreground not-data-[variant=destructive]:data-highlighted:**:text-accent-foreground gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm [&_svg:not([class*='size-'])]:size-4 relative flex w-full cursor-default items-center outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+    className,
+  )}
+>
+  <span
+    data-slot="combobox-item-indicator"
+    class="pointer-events-none absolute right-2 flex size-4 items-center justify-center"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="pointer-events-none"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"/></svg>
+  </span>
+  <span data-slot="combobox-item-text" class="flex flex-1 gap-2"><slot /></span>
+</div>

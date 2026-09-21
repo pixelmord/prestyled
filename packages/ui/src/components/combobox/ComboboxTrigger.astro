@@ -1,0 +1,30 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { cn } from "@repo/ui/lib/utils";
+
+interface Props extends HTMLAttributes<"button"> {
+  class?: string;
+  size?: "sm" | "default" | "lg";
+}
+
+const {
+  class: className = "",
+  size = "default",
+  ...rest
+} = Astro.props as Props;
+---
+
+<button
+  {...rest}
+  type="button"
+  data-slot="combobox-trigger"
+  data-size={size}
+  class={cn(
+    "[&_svg:not([class*='size-'])]:size-4 rounded-lg flex w-full items-center justify-between whitespace-nowrap outline-none disabled:cursor-not-allowed disabled:opacity-50 *:data-[slot=combobox-value]:line-clamp-1 *:data-[slot=combobox-value]:flex *:data-[slot=combobox-value]:items-center [&_svg]:pointer-events-none [&_svg]:shrink-0",
+    className,
+  )}
+>
+  <slot />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-muted-foreground size-4 pointer-events-none"
+    data-slot="combobox-icon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg>
+</button>
